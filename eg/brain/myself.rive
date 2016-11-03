@@ -4,10 +4,20 @@
 - Que es tan gracioso?
 
 + hola <bot name>
-- Hola, como estas?
+- <call>saludar</call> Hola, como estas?
 
 + hola
-- Hola, que puedo hacer por ti?
+- <call>saludar</call> Hola, que puedo hacer por ti?
+
+> object saludar javascript
+    console.log("saludar ejecuto");
+    $("#saludo").show();
+    $("#normal").hide();
+
+    setTimeout(function(){ $("#saludo").hide();$("#normal").show(); }, 1570);
+
+
+< object
 
 + [hola] soy *
 - <set name=<star>> Me alegra escucharte <star>
