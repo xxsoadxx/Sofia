@@ -40,12 +40,12 @@ module.exports = (grunt) ->
       server:
         options:
           protocol: "http"
-          hostname: "192.168.1.3"
+          hostname: "10.12.10.121"
           port: 8000
           base: "eg/web-client"
           directory: "eg/web-client"
           keepalive: true
-          open: "http://10.12.11.204:8000"
+          open: "http://10.12.10.121:8000"
           middleware: (connect, options, middlewares) ->
             # Allow rivescript.js to be accessed from the web root.
             middlewares.unshift (req, res, next) ->
