@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RiveScript-JS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="chat.css">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js"></script>
+<script type="text/javascript" src="datadumper.js"></script>
+<script type="text/javascript" src="../lib/rivescript.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<h1>[B]Developers Bot</h1>
+
+<fieldset>
+	<legend>Conversación</legend>
+	<div id="dialogue"></div>
+</fieldset>
+
+<form onSubmit="return sendMessage()">
+	<fieldset>
+		<legend>Enviar mensaje</legend>
+
+		<table class="input-table">
+			<tr>
+				<td class="text-box">
+					<input type="text" size="40" name="message" id="message" autocomplete="off" disabled placeholder="Please wait... loading...">
+				</td>
+				<td class="send-button">
+					<input type="submit" value="Send">
+					<button type="button" class="btn btn-success" onclick="sendAudio(event)" >Audio</button>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+
+<fieldset>
+	<legend>Debugger</legend>
+
+	<input type="button" value="Debug Mode" id="toggle" onClick="toggleDebug()">
+	<input type="button" value="Clear Log" onClick="$('#debug').empty()">
+	<input type="button" value="Dump Data Structure" onClick="DumperPopup(rs)">
+
+	<div id="debug"></div>
+</fieldset>
+
+<script type="text/javascript">
+
+
+// Handle the debug mode query string parameter.
+var voices;
+var ajaxcount = 0;
+var audiocommand = false;
+var debugMode = false;
+var prendido = 'N';
+GetVoices();
+function InitAnnyang(commands){
+ if (annyang) {
+    // Let's define our first command. First the text we expect, and then the function it should call
+   
+    annyang.setLanguage('es-UY');
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+    
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+   
+    }
+} 
+
+
+function GetVoices(){
+    console.log("GetVoices");
+    if ('speechSynthesis' in window) {
+    // Synthesis support. Make your web apps talk!
+        voices = window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = function() {
+                console.log("Actualizo GetVoices");
+                voices = window.speechSynthesis.getVoices();
+        };
+        
+    }
+}
+
+function sendAudio(e){
+	e.preventDefault();
+	annyang.start();
+	prendido = 'S';
+	console.log('start annyang');
+}
+
+var runCommand = function(command){
+	audiocommand = true;
+	console.log('runCommand = ' + command);
+	$("#message").val(command);
+	sendMessage ();
+	if(prendido === 'S'){
+		annyang.abort();
+		prendido = 'N';
+	}
+}
+
+var commands = {
+	'*command': runCommand,
+};    
+InitAnnyang(commands);
+
+if (window.location.search.indexOf("debug=1") > -1) {
+	$("#toggle").val("Disable Debug Mode");
+	debugMode = true;
+} else {
+	$("#toggle").val("Enable Debug Mode");
+}
+
+// Create our RiveScript interpreter.
+var rs = new RiveScript({
+	debug:   debugMode,
+	onDebug: onDebug
+});
+
+// This won't work on the web!
+//rs.loadDirectory("brain");
+
+// Load our files from the brain/ folder.
+rs.loadFile([
+	"brain/begin.rive",
+	"brain/admin.rive",
+	"brain/clients.rive",
+	"brain/eliza.rive",
+	"brain/myself.rive",
+	"brain/javascript.rive",
+	"brain/prueba.rive"
+	], on_load_success, on_load_error);
+
+// You can register objects that can then be called 
+// using <call></call> syntax
+rs.setSubroutine('fancyJSObject', function(rs, args){
+	// doing complex stuff here
+	
+	
+});
+
+function on_load_success () {
+	$("#message").removeAttr("disabled");
+	$("#message").attr("placeholder", "Send message");
+	$("#message").focus();
+
+	// Now to sort the replies!
+	rs.sortReplies();
+}
+
+function on_load_error (err) {
+	console.log("Loading error: " + err);
+}
+
+// Handle sending a message to the bot.
+function sendMessage () {
+	var text = $("#message").val();
+	$("#message").val("");
+	$("#dialogue").append("<div><span class='user'>You:</span> " + text + "</div>");
+	try {
+		
+	var reply = rs.reply("soandso", text);
+	if(ajaxcount === 0){
+		showreply(reply);
+	}
+	} catch(e) {
+		window.alert(e.message + "\n" + e.line);
+		console.log(e);
+	}
+
+	return false;
+}
+
+// Button that turns debugging on and off.
+function toggleDebug () {
+	if (debugMode) {
+		window.location = "?debug=0";
+	} else {
+		window.location = "?debug=1";
+	}
+}
+
+function onDebug(message) {
+	if (debugMode) {
+		$("#debug").append("<div>[RS] " + escapeHtml(message) + "</div>");
+	}
+}
+
+function escapeHtml(text) {
+	return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function showreply(reply) {
+		console.log("showreply");
+		reply = reply.replace(/\n/g, "<br>");
+		$("#dialogue").append("<div><span class='bot'>Bot:</span> " + reply + "</div>");
+		$("#dialogue").animate({ scrollTop: $("#dialogue").height() }, 1000);
+		if(prendido === 'S' || (ajaxcount > 0 && audiocommand)){
+			if(audiocommand){
+				audiocommand = false;
+			}
+			console.log("Va a hablar");
+			var msg = new SpeechSynthesisUtterance();
+			console.log("voices = " + JSON.stringify(voices));
+			msg.voice = voices[6]; // Note: some voices don't support altering params
+			msg.voiceURI = 'native';
+			msg.volume = 1; // 0 to 1
+			msg.rate = 1; // 0.1 to 10
+			msg.pitch = 1; //0 to 2
+			msg.text = reply;
+			msg.lang = 'es-UY';
+
+			msg.onend = function(e) {
+			console.log('Finished in ' + event.elapsedTime + ' seconds.');
+			};
+
+			speechSynthesis.speak(msg);
+		}
+
+
+}
+ 
+</script>
+
+</body>
+</html>

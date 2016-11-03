@@ -1,0 +1,74 @@
+
+! version = 2.0
+! var cuenta = ""
+
++ [*] (que tienen para mí|que tienen para ofrecerme|que hay para mí en el banco|de qué servicios disponen|de que disponen|que ofrecen)
+- En BCI ofrecemos productos para personas y empresas como.\s
+^ Planes de cuentas, Tarjetas, Créditos Hipotecarios, Seguros, Inversiones y Créditos de Consumo.\s
+^ Para informarte dime información de. seguido de un producto
+
++ [*] (tiene|ofrece|productos|tienen para ofrecer) [el] [del] [en el] banco
+- En BCI ofrecemos productos para personas y empresas como.\s
+^ Planes de cuentas, Tarjetas, Créditos Hipotecarios, Seguros, Inversiones y Créditos de Consumo.\s
+^ Para informarte dime información de. seguido de un producto
+
+
+
+
++ [*] (quiero|necesito|puedo) [hacer] [una] (transferir|transferencia|transfer)
+* <get name> != undefined =>bien comienza indicando la cuenta destino
+- Debes identificarte para transferir.
+
+
+    + (la cuenta es|cuenta numero) *
+    % bien comienza indicando la cuenta destino
+    - <set cuenta=<star2>> <star2> confirmas la cuenta?
+
+    + (la cuenta es|cuenta numero) *
+    % confirmas la cuenta
+    - <set cuenta=<star2>><star2> confirmas la cuenta? 
+
+    + si
+    % * confirmas la cuenta
+    - Bien continuamos
+
+    + no
+    % * confirmas la cuenta
+    - Dime otra cuenta
+
+    + (que cuenta te dije|como era la cuenta|que cuenta te pase|me repites la cuenta|recuerdame la cuenta)
+    - Que mala memoria! La cuenta es <get cuenta>
+
+
+
++ [*] (cómo vengo|cómo vienen mis finanzas|llego a fin de mes)
+- Llevas gastado el 30% de tus ingresos. A este ritmo no llegas a fin de mes
+
++ [*] (necesito|quiero) el saldo de (mis|mi) (cuenta|cuentas) en (dólares|dolares|dólar)
+- El saldo de tu cuenta es de diez mil ochocientos dólares
+
++ [*] (cotización|cotizacion) del (dolar|dólar)
+- <call>getcot</call>
+
+
+
+> object getcot javascript
+    console.log("getcot ejecuto");
+    ajaxcount ++;
+	$.ajax({
+        url: 'http://10.12.11.204:4000/hola',
+        error: function() {
+            console.log("error");
+			ajaxcount --;
+			showreply("El servicio no esta disponible");
+        
+        },
+        success: function(data) {
+           console.log("data" + JSON.stringify(data));
+		   
+           showreply("La cotizacion del dolar es, compra 30 venta 40");
+           ajaxcount --;
+        },
+        type: 'GET'
+	});
+< object
