@@ -142,7 +142,32 @@
 </head>
 <body style="background-image:url(fondo.jpg);background-repeat:no-repeat;background-size: cover;">
 
+<div style="display: none;" class="suscribe-splash"> 
+    <div class="suscribe-title">
+        <!--<img alt="image" style="width:123px;" src="img/logo_bkp.png"/>-->
+        <h1 id="logtit">Bienvenido!</h1>
+        <p id="logtit2">Debes identificarte para comenzar.</p>
 
+        <h1 id="regtit" style="display:none;">Registro</h1>
+        <p id="regtit2" style="display:none;">Completa los siguientes datos para comenzar.</p>
+        <form data-inview-animation="fadeInUp" class="form-horizontal" name="form" id="subscribe_form" onsubmit="return false">
+    
+               <input type="text" style="color:#000;margin-bottom: 15px;" placeholder="ingrese su usuario" required="" class="form-control m-b m-t" name="email" id="user">
+			   <input type="password" style="color:#000;margin-bottom: 15px;" placeholder="ingrese su clave" required="" class="form-control m-b m-t" name="email" id="pwd">
+                <input type="text" style="color:#000;margin-bottom: 15px;display:none;" placeholder="Nombre" required="" class="form-control m-b m-t" name="email" id="nom">
+               <input type="text" style="color:#000;margin-bottom: 15px;display:none;" placeholder="Apellido" required="" class="form-control m-b m-t" name="email" id="ape">
+               <input type="number" style="color:#000;margin-bottom: 15px;display:none;" placeholder="Numero de RUC" required="" class="form-control m-b m-t" name="email" id="ruc">
+               <input type="text" style="color:#000;margin-bottom: 15px;display:none;" placeholder="Correo electrónico" required="" class="form-control m-b m-t" name="email" id="mail">
+               <button type="submit" class="btn btn-primary " id="subscribesubmit" onclick="ingreso()" >Ingresar</button>
+               <button type="button" class="btn btn-primary " style="display:none;" id="volver" onclick="volve()">Volver</button>
+               <button type="button" class="btn btn-primary " id="subscribesubmit2" onclick="nuevo()" >¿No tiene cuenta? Click aqui</button>
+
+              
+
+          
+        </form>
+    </div> 
+</div>
 
 
 <div class="header" id="header" style="background-color: rgb(145, 34, 137);color: #FFF;height: 655px;">
@@ -172,6 +197,108 @@
 
 
 <script type="text/javascript">
+var UF=26268.28
+var UTM=45999.00
+var IPSA=4213.17
+var USD=650.72
+var EURO=722.62
+var facturas = [{"Plan Claro":14990}]
+var contactos = [{"Contacto":"Carlos","Cuenta":654848134136}]
+var movimientos = [{"Id":"Uber","Desc":"Viaje Uber","Importe":990,"tipo":"D"},{"Id":"Market","Desc":"Viaje Uber","Importe":990,"tipo":"D"}]
+
+
+
+if(typeof(Storage) !== "undefined") {
+   if (localStorage.user) {
+       $('.suscribe-splash').hide();
+       var user = localStorage.user;
+        var ape = localStorage.ape;
+        var ruc = localStorage.ruc;
+        var mail = localStorage.mail;
+        var Cuenta = 940000;
+   } else {
+       console.log("usuario vacio");
+       $('.suscribe-splash').show();
+   }
+} else {
+
+}
+
+var tipo = 'I';
+function ingreso(){
+    if(tipo === 'I'){
+        $( "#nom" ).val('null') ;
+        $( "#ape" ).val('null'); 
+        $( "#ruc" ).val(10) ;
+        $( "#mail" ).val('mail@mail.com'); 
+        if(typeof(Storage) !== "undefined") {
+            var user = $( "#user" ).val() ;
+            console.log("graba " + user);
+            localStorage.user = user;
+        } else {
+        console.log("undefined ");
+        }
+    }
+    if(tipo === 'E'){
+        $( "#user" ).val('null') ;
+        $( "#pwd" ).val('null'); 
+        if(typeof(Storage) !== "undefined") {
+            var user = $( "#nom" ).val() ;
+            var ape = $( "#ape" ).val() ;
+            var ruc = $( "#ruc" ).val() ;
+            var mail = $( "#mail" ).val() ;
+            localStorage.user = user;
+            localStorage.ape = ape;
+            localStorage.ruc = ruc;
+            localStorage.mail = mail;
+
+        } else {
+        console.log("undefined ");
+        }
+    }
+    
+
+    var inpObj = document.getElementById("subscribe_form");
+    if (inpObj.checkValidity() == true) {
+        $('.suscribe-splash').hide();
+    }
+	
+
+}
+function volve() {
+    $('#logtit').show();
+    $('#logtit2').show();
+    $('#regtit').hide();
+    $('#regtit2').hide();
+
+	$('#user').show();
+    $('#pwd').show();
+    $('#subscribesubmit2').show();
+    $('#volver').hide();
+    $('#nom').hide();
+    $('#ape').hide();
+    $('#ruc').hide();
+    $('#mail').hide();
+    tipo = 'I';
+}
+function nuevo(){
+
+
+    $('#logtit').hide();
+    $('#logtit2').hide();
+    $('#regtit').show();
+    $('#regtit2').show();
+
+	$('#user').hide();
+    $('#pwd').hide();
+    $('#subscribesubmit2').hide();
+    $('#volver').show();
+    $('#nom').show();
+    $('#ape').show();
+    $('#ruc').show();
+    $('#mail').show();
+    tipo = 'E';
+}
 
 
 $( "#message" ).keyup(function( event ) {
@@ -267,10 +394,14 @@ var rs = new RiveScript({
 // Load our files from the brain/ folder.
 rs.loadFile([
 	"brain/begin.rive",
+	"brain/admin.rive",
+	"brain/clients.rive",
+	"brain/eliza.rive",
 	"brain/myself.rive",
 	"brain/javascript.rive",
 	"brain/prueba.rive",
-	"brain/laser.rive"
+	"brain/laser.rive",
+    "brain/internetbanking.rive"
 	], on_load_success, on_load_error);
 
 // You can register objects that can then be called 

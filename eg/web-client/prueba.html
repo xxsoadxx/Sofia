@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playground</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
+
+
+<style>
+ 
+
+
+
+</style>
+
+</head>
+<body style="background-image:url(fondo.jpg);background-repeat:no-repeat;background-size: cover;">
+
+<div id="aca">
+
+</div>
+
+
+
+<script type="text/javascript">
+
+
+
+var commands = {
+  '*command': function(word){
+      $('#aca').append('|'+word+'|');
+   }
+};
+
+// Add our commands to annyang
+annyang.addCommands(commands);
+// Start listening. You can call this here, or attach this call to an event, button, etc.
+annyang.start();
+
+ 
+</script>
+
+</body>
+</html>

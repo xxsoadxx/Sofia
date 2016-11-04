@@ -1,21 +1,6 @@
 // A generic set of chatting responses. This set mimicks the classic Eliza bot.
 
-+ *
-- <call>noentiendo</call> No te he entendido
-- <call>noentiendo</call> ¿Podrías repetírmelo?
-- <call>noentiendo</call> Prueba decirlo de otra manera
 
-
-
-
-> object noentiendo javascript
-       console.log("saludar ejecuto");
-        $("#what").show();
-        $("#normal").hide();
-
-        setTimeout(function(){ $("#what").hide();$("#normal").show(); }, 3000);
-
-< object
 
 
 + [*] (sorry|apologize|apology) [*]

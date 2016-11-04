@@ -1,0 +1,76 @@
+
+
++ [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] saldo [*] cuenta [*]
+- <call>getsaldo</call>
+
++ saldo [*] cuenta [*]
+- <call>getsaldo</call>
+
+> object getsaldo javascript
+    console.log("getcot ejecuto");
+    if(tipo === 'I'){
+        showreply("El saldo de tu cuenta es " + Cuenta + " pesos");
+    }else{
+        showreply("No posees una cuenta en el banco. Si deseas que inicie una solicitud tan solo dilo");
+    }
+< object
+
+
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (dolar|dolares) [*]
+- <call>getdolar</call>
+
++ cotizacion [*] (dolar|dolares) [*]
+- <call>getdolar</call>
+
+> object getdolar javascript
+   
+        showreply("El cotización del dólar es de " + USD + " pesos");
+   
+< object
+
+
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (euro|euros) [*]
+- <call>geteuro</call>
+
++ cotizacion [*] (euro|euros) [*]
+- <call>geteuro</call>
+
+> object geteuro javascript
+   
+        showreply("El cotización del dólar es de " + EURO + " pesos");
+   
+< object
+
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (unidad de fomento|UF) [*]
+- <call>getuf</call>
+
++ cotizacion [*] (unidad de fomento|UF) [*]
+- <call>getuf</call>
+
+> object getuf javascript
+   
+        showreply("El cotización de la unidad de fomento es de " + UF + " pesos");
+   
+< object
+
+
++ [*] (quisiera|necesito|quiero|solicito|necesitar|necesitaria|exijo|demando|podes|podrias) [que le] [le] [una] (transfieras|transferir|transferencia|transferirle|enviarle|mandarle|mandar|mandes|girar|enviar|envies|mandar|mandes|girarle|girarle|gires|pasarle|pasar|pases|deposites|depositar|depositarle) * [pesos] (a|para) * [*]
+- <call>monttransfer <star3><star5></call>
+
+
+
+> object monttransfer javascript
+        console.log('monttransfer' + args);
+        if(tipo === 'I'){
+
+          
+            showreply("El saldo de tu cuenta es " + Cuenta + " pesos");
+        }else{
+            showreply("No posees una cuenta en el banco. Si deseas que inicie una solicitud tan solo dilo");
+        }
+
+   
+< object
+
+
+

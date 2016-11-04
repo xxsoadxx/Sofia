@@ -1,5 +1,313 @@
-+ [*] (que edad|cuantos [a�os] ten�s|tienes|tenes)
-- Soy inmortal, no tengo edad
+﻿! sub él = el   
+! sub dé = de
+! sub más = mas
+! sub mí = mi
+! sub sé = se
+! sub sí = si
+! sub té = te
+! sub tú = tu
+! sub ó = o
+! sub aún = aun
+! sub sólo = solo
+! sub qué = que
+! sub quién = quien
+! sub cuándo = cuando
+! sub cómo = como
+! sub dónde = donde
+! sub cuánto = cuanto
+! sub por qué = por que
+! sub porqué = porque
+! sub éste = este
+! sub ésta = esta
+! sub éstos = estos
+! sub éstas = estas
+! sub ése = ese
+! sub ésa = esa
+! sub ésos = esos
+! sub ésas = esas
+! sub aquél = aquel
+! sub aquélla = aquella
+! sub aquéllas = aquellas
+! sub aquéllos = aquellos
+! sub podrías = podrias
+! sub crédito = credito
+! sub créditos = creditos
+! sub información = informacion
+! sub cuáles = cuales
+! sub telefónico = telefonico
+! sub contás = contas
+! sub estás = estas
+! sub dólar = dolar
+! sub dócil = docil
+! sub corría = corria
+! sub ángel = angel
+! sub azúcar = azucar
+! sub fácil = facil
+! sub sabía = sabia
+! sub perú = peru
+! sub sofá = sofa
+! sub café = cafe
+! sub rubí = rubi
+! sub menú = menu
+! sub marroquí = marroqui
+! sub bebé = bebe
+! sub también = tambien
+! sub algún = algun
+! sub jamás = jamas
+! sub según = segun
+! sub sillón = sillon
+! sub además = ademas
+! sub organización = organizacion
+! sub capitán = capitan
+! sub alemán = aleman
+! sub anís = anis
+! sub raúl = raul
+! sub baúl = baul
+! sub raíz = raiz
+! sub maíz = maiz
+! sub acción = accion
+! sub vudú = vudu
+! sub francés = frances
+! sub américa = america
+! sub bélgica = belgica
+! sub sudáfrica = sudafrica
+! sub música = musica
+! sub miércoles = miercoles
+! sub sílaba = silaba
+! sub máquina = maquina
+! sub gramática = gramatica
+! sub económico = economico
+! sub pájaro = pajaro
+! sub séptimo = septimo
+! sub cuídate = cuidate
+! sub brújula = brujula
+! sub gótico = gotico
+! sub hígado = higado
+! sub ejército = ejercito
+! sub características = caracteristicas
+! sub cállate = callate
+! sub dámelo = damelo
+! sub fósforo = fosforo
+! sub cáscara = cascara
+! sub cerámica = ceramica
+! sub oxígeno = oxigeno 
+! sub didáctico = didactico
+! sub válido = valido
+! sub sillón = sillon
+! sub camarón = camaron
+! sub país = pais
+! sub préstamo = prestamo
+! sub préstamos = prestamos
+! sub así = asi
+! sub aquí = aqui
+! sub infórmame = informame
+! sub préstame = prestame
+! sub asísteme = asisteme
+! sub cuál = cual
+! sub cuáles = cuales
+! sub explícame = explicame
+! sub tenés = tenes
+! sub podés = podes
+! sub pásame = pasame
+! sub cotización = cotizacion
+! sub dólares = dolares
+! sub financiación = financiacion
+! sub necesitaría = necesitaria
+! sub ayúdame = ayudame
+
++ [*] (hola) [sofia] [sofi] [*]
+- ¡Hola! Siempre es un placer hablar contigo, si esta es tu primera vez, dime ayuda.
+
+/* AYUDA */
++ [*] ayuda
+- Soy capaz de explicarte todos los servicios que banco BCI tiene para ti, solo debes preguntarme por ellos. Por ejemplo, si quieres saber sobre nuestras tarjetas, solo dime "quiero información de sus tarjetas".
+
++ [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (prestamos|prestamo)
+- ¿Con qué tipo de préstamo necesitas ayuda?
+
++ [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (transferencia|transferencias)
+- ¿Con qué tipo de transferencia necesitas ayuda?
+
++ [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (planes|plan)
+- ¿Con qué tipo de plan necesitas ayuda?
+
+/*BOLUDECES*/
+
++ [*] (como|que tal) (estas|te sientes|te encuentras|te sentis) [*]
+- Estoy muy bien, y tú.
+- Hoy me siento en fase beta, y tu en que fase estás? jaja
+
++ [*]chiste[*]
+- Anda a saber le dijeron. Y se fue a la escuela.
+
++ [*] (te quiero|te amo| te adoro) [*]
+- Y yo a ti
+- El sentimiento es mutuo
+- Que amable eres! yo tambien a ti
+- Te quiero, te adoro, como la vaca al toro.
+
+/*TARJETAS*/
+
+/*Larga*/
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre las|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta) [*]
+- Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+
+/*Larga invertida*/
++ [*] (que tarjeta|cual tarjeta|que tarjetas|cuales tarjetas|mi tarjeta|tu tarjeta|las tarjetas|todas las tarjetas|la tarjeta|que tarjeta|una tarjeta) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|me puedes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
+- Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+
+/*Corta*/
++ [*] (que|cual|cuales) (tarjeta|tarjetas) (tienen|tenes|hay) [*]
+- Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+
++ [*] (donde) [*] (tarjeta) [*]
+- En cualquiera de nuestras 240 sucursales a lo largo de Chile.
+
++ [*] (cuales) [*] (tarjetas) [*]
+- Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+
+*******************************************
+/* TARJETAS VISA*/
+
++ [*] (tarjetas/tarjeta) visa [*]
+- Contamos con 4 tipos de tarjeta BCI Visa. Classic, Gold, Platinum y Signature. Mencioname cuál te interesa y con mucho gusto te contaré más.
+
+/* VISA CLASSIC */
+
++ [*] visa (classic|clasic|clásica) [*]
+- Una tarjeta especialmente diseñada para atender las necesidades de nuestros clientes más jóvenes, que comienzan a viajar y concretar sus proyectos. Entrega mayor seguridad ya que evita portar dinero en efectivo, aumentando además las posibilidades de compra al permitir diferir los pagos. Para conocer sus beneficios exclusivos, dime beneficios Visa Classic. Para conocer los requisitos de obtención, dime requisitos Visa Classic.
+
++ [*] requisitos [*] visa (classic|clasic|clásica) [*]
+- Renta líquida mensual desde 400.000 pesos. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo, Profesionales Independientes con al menos 1 año de ejercicio de la profesión, y para comerciantes y/o industriales es igual que para el profesional independiente, pero requiere de 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios [*] visa (classic|clasic|clásica) [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje y Seguro de Accidentes en Viaje. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+/* VISA GOLD */
+
++ [*] visa (gold|dorada) [*]
+- Bci Visa Gold te entrega un completo conjunto de beneficios, seguros y servicios de viaje. ¡Solicita tu Tarjeta de Crédito Bci Visa Gold y comienza a disfrutar ahora! Para conocer sus beneficios exclusivos, dime beneficios visa gold. Para conocer los requisitos de obtención, dime requisitos Visa Gold.
+
++ [*] requisitos visa (gold|dorada|oro) [*]
+- Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios visa (gold|dorada|oro) [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+/* VISA PLATINUM */
+
++ [*] visa (platinum|platino) [*]
+- Bci Visa Platinum cuenta con la tecnología Chip, que te permite realizar compras y avances en efectivo con la mayor seguridad disponible y en todos los comercios adheridos. ¡Pide ahora tu Tarjeta y disfrútala en tu próximo viaje! Para conocer sus beneficios exclusivos, dime beneficios Visa Platinum. Para conocer los requisitos de obtención, dime requisitos Visa Platinum.
+
++ [*] requisitos visa (platinum|platino) [*]
+- Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios visa (gold|dorada|oro) [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+/* VISA SIGNATURE */
+
++ [*] visa signature [*]
+- Con su Tarjeta VISA Signature podrá recibir protección y servicios con los más altos estándares. Además, podrá hacer uso de una gran cantidad de ofertas orientadas a satisfacer sus necesidades. Para conocer sus beneficios exclusivos, dime beneficios Visa Signature. Para conocer los requisitos de obtención, dime requisitos Visa Signature.
+
++ [*] requisitos visa signature [*]
+- Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios visa signature [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+************************************************************************
+
+/* TARJETAS MASTERCARD */
+
++ [*] (tarjetas|tarjeta) mastercard [*]
+- Contamos con 3 tipos de tarjeta BCI MasterCard. Gold, Platinum y Black. Mencioname cuál te interesa y con mucho gusto te contaré más. 
+
+/* MASTERCARD GOLD */
+
++ [*] mastercard (gold|dorada) [*]
+- Con ella podrás acceder a un mundo de servicios y beneficios, además de realizar compras en Chile y el extranjero con la mayor seguridad, facilidad y conveniencia. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Gold. Para conocer los requisitos de obtención, dime requisitos MasterCard Gold.
+
++ [*] requisitos mastercard (gold|dorada|oro) [*]
+- Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios mastercard (gold|dorada|oro) [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+/* MASTERCARD PLATINUM */
+
++ [*] mastercard (platinum|platino) [*]
+- Esta Tarjeta de Crédito cuenta con Chip, lo que permite, en conjunto con su clave secreta PinPass, realizar compras y avances con mayor seguridad en todos los comercios adheridos a esta nueva tecnología. ¡Solicita tu Tarjeta Bci MasterCard Platinum y disfruta de beneficios únicos!Para conocer sus beneficios exclusivos, dime beneficios MasterCard Platinum. Para conocer los requisitos de obtención, dime requisitos MasterCard Platinum.
+
++ [*] requisitos mastercard (platinum|platino) [*]
+- Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios mastercard (platinum|platino) [*]
+- Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+
+/* MASTERCARD BLACK */
+
++ [*] mastercard (black|negra) [*]
+- Su nueva Tarjeta Bci Mastercard Black le permitirá contar con un asistente personal a su disposición, junto a los mejores seguros y servicios del mercado. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Black. Para conocer los requisitos de obtención, dime requisitos MasterCard Black.
+
++ [*] requisitos mastercard (black|negra) [*]
+- Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios mastercard (black|negra) [*]
+- Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+*********************************************************************************
+
+
+/*REDCOMPRA*/
+
++ [*] (tarjetas|tarjeta) (redcompra|red compra) [*]
+- Tu Tarjeta Redcompra Bci está asociada a una Cuenta Corriente Bci y con ella puedes manejar tu dinero de forma fácil, simple y segura. Realiza tus compras, pagos, giros y depósitos en cualquier minuto y durante todo el año. Además, para hacer tu vida más simple, puedes pagar tus cuentas y productos en línea usando el servicio Webpay. ¡Úsala para todo!
+
+***********************************************************************************
+
+
+/*BENEFICIOS*/
+
++ [*] seguro de accidentes en viaje [*]
+- Al pagar el valor total del o los tickets de viaje con su Tarjeta Bci Visa Signature acceda al Seguro de Accidentes en Viaje, el cual le entrega protección en caso de lesiones sufridas en el viaje.
+
++ [*] seguro de arriendo de automoviles [*]
+- Cada vez que rente un auto con su Tarjeta Bci Visa Signature accede al Seguro de Arriendo de Automóviles.
+
+
+/*PRESTAMOS*/
+
+/*Larga*/
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre los|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que prestamos|los prestamos|prestamos|sus prestamos|todas los prestamos|los prestamos|un prestamo|el prestamo) [*]
+- informacion de préstamos
+
+/*Larga invertida*/
++ [*] (que prestamo|cual prestamo|que prestamos|cuales prestamos|mi prestamo|tu prestamo|los prestamos|todos los prestamos|el prestamo|que prestamo|una prestamo) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
+- informacion de préstamos
+
+/*Corta*/
++ [*] (que|cual|cuales) (prestamo|prestamos) (tienen|tenes|hay) [*]
+-información de préstamos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 

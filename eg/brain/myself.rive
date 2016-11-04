@@ -1,4 +1,20 @@
 // Tell the user stuff about ourself.
++ *
+- <call>noentiendo</call> No te he entendido
+- <call>noentiendo</call> ¿Podrías repetírmelo?
+- <call>noentiendo</call> Prueba decirlo de otra manera
+
+
+
+
+> object noentiendo javascript
+       console.log("saludar ejecuto");
+        $("#what").show();
+        $("#normal").hide();
+
+        setTimeout(function(){ $("#what").hide();$("#normal").show(); }, 3000);
+
+< object
 
 + (jaja|ja|jajaja|jojo|juju|jiji|jua|juas|ja ja|ja ja ja)
 - Que es tan gracioso?
@@ -78,9 +94,6 @@
 + (de qué color son tus ojos|qué color son tus ojos|de que color son tus ojos|que color son tus ojos|dime el color de tus ojos)
 - tengo ojos <bot eyes>.
 //- {sentence}<bot eyes>{/sentence}.
-
-+ what do you look like
-- I have <bot eyes> eyes and <bot hairlen> <bot hair> hair.
 
 + cuál haces
 - trabajo en <bot job>.

@@ -15,7 +15,7 @@
 
 
 
-+ [*] (quiero|necesito|puedo) [hacer] [una] (transferir|transferencia|transfer)
++ [*] (quiero|necesito|puedo|debo|preciso) [hacer] [una] (transferir|transferencia|transfer)
 * <get name> != undefined =>bien comienza indicando la cuenta destino
 - Debes identificarte para transferir.
 
