@@ -15,25 +15,37 @@
 
 
 
-+ [*] (quiero|necesito|puedo|debo|preciso) [hacer] [una] (transferir|transferencia|transfer)
++ [*] (quiero|necesito|puedo|debo|preciso) [hacer] [una] (transferir|transferencia|transfer) [*]
 * <get name> != undefined =>bien comienza indicando la cuenta destino
 - Debes identificarte para transferir.
 
 
-    + (la cuenta es|cuenta numero) *
+    + (la cuenta es|cuenta numero|cuenta) *
     % bien comienza indicando la cuenta destino
-    - <set cuenta=<star2>> <star2> confirmas la cuenta?
+    - <set cuenta=<star2>>confirmas la cuenta <star2>?
 
-    + (la cuenta es|cuenta numero) *
-    % confirmas la cuenta
+    + (la cuenta es|cuenta numero|cuenta) *
+    % confirmas la cuenta *
     - <set cuenta=<star2>><star2> confirmas la cuenta? 
 
     + si
-    % * confirmas la cuenta
-    - Bien continuamos
+    % confirmas la cuenta *
+    - bien continuamos. indicame el monto a transferir
+
+    + (el monto es|monto) *
+    % bien continuamos. indicame el monto a transferir
+    - <set monto=<star2>>confirmas el monto <star2>?
+    
+    + si
+    % confirmas el monto *
+    - estamos listos para transferir. di transferir para enviar
+
+    + tansferir
+    % estamos listos para transferir. di transferir para enviar
+    - Transferencia realizada con éxito.
 
     + no
-    % * confirmas la cuenta
+    % confirmas la cuenta *
     - Dime otra cuenta
 
     + (que cuenta te dije|como era la cuenta|que cuenta te pase|me repites la cuenta|recuerdame la cuenta)
@@ -42,11 +54,8 @@
 + [*] (cómo vengo|cómo vienen mis finanzas|como vienen mis finanzas|llego a fin de mes)
 - Llevas gastado el 30% de tus ingresos. A este ritmo no llegas a fin de mes
 
-+ [*] (necesito|quiero) el saldo de (mis|mi) (cuenta|cuentas) en (dólares|dolares|dólar)
-- El saldo de tu cuenta es de diez mil ochocientos dólares
-
-+ [*] (cotización|cotizacion) del (dolar|dólar)
-- <call>getcot</call>
++ [*] (necesito|quiero) el saldo de (mis|mi) (cuenta|cuentas) en (dólares|dolares|dólar) [*]
+- El saldo de tu cuenta es de $10800
 
 
 

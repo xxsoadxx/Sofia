@@ -3,74 +3,147 @@
 + [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] saldo [*] cuenta [*]
 - <call>getsaldo</call>
 
++ [*] saldo [*] cuenta [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando)
+- <call>getsaldo</call>
+
 + saldo [*] cuenta [*]
+- <call>getsaldo</call>
+
++ cuenta [*] saldo [*]
 - <call>getsaldo</call>
 
 > object getsaldo javascript
     console.log("getcot ejecuto");
     if(tipo === 'I'){
-        showreply("El saldo de tu cuenta es " + Cuenta + " pesos");
+        showreply("El saldo de tu cuenta es " + cuenta + " pesos");
     }else{
         showreply("No posees una cuenta en el banco. Si deseas que inicie una solicitud tan solo dilo");
     }
 < object
 
 
-+ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (dolar|dolares) [*]
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (dolar|dolares) [*]
 - <call>getdolar</call>
 
-+ cotizacion [*] (dolar|dolares) [*]
++ [*] (dolar|dolares) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
+- <call>getdolar</call>
+
++ [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (dolar|dolares) [*]
+- <call>getdolar</call>
+
++ [*] (cotizacion|cotizando) [*] (dolar|dolares) [*]
+- <call>getdolar</call>
+
++ [*] (dolar|dolares) [*] (cotizacion|cotizando) [*]
 - <call>getdolar</call>
 
 > object getdolar javascript
    
-        showreply("El cotización del dólar es de " + USD + " pesos");
+        showreply("La cotización del dólar es de " + USD + " pesos");
    
 < object
 
 
-+ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (euro|euros) [*]
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (euro|euros) [*]
 - <call>geteuro</call>
 
-+ cotizacion [*] (euro|euros) [*]
++ [*] (euro|euros) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
+- <call>geteuro</call>
+
++ [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (euro|euros) [*]
+- <call>geteuro</call>
+
++ [*] cotizacion [*] (euros|euro) [*]
+- <call>geteuro</call>
+
++ [*] (euro|euros) [*] cotizacion [*]
 - <call>geteuro</call>
 
 > object geteuro javascript
    
-        showreply("El cotización del dólar es de " + EURO + " pesos");
+        showreply("La cotización del dólar es de " + EURO + " pesos");
    
 < object
 
-+ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] cotizacion [*] (unidad de fomento|UF) [*]
+
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (unidad de fomento|UF|unidad fomento) [*]
 - <call>getuf</call>
 
-+ cotizacion [*] (unidad de fomento|UF) [*]
++ [*] (unidad de fomento|UF|unidad fomento) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
+- <call>getuf</call>
+
++ [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (unidad de fomento|UF|unidad fomento) [*]
+- <call>getuf</call>
+
++ [*] cotizacion [*] (unidad de fomento|UF|unidad fomento) [*]
+- <call>getuf</call>
+
++ [*] (unidad de fomento|UF|unidad fomento) [*] cotizacion [*]
 - <call>getuf</call>
 
 > object getuf javascript
    
-        showreply("El cotización de la unidad de fomento es de " + UF + " pesos");
+        showreply("La cotización de la unidad de fomento es de " + UF + " pesos");
    
 < object
-
-
-+ [*] (quisiera|necesito|quiero|solicito|necesitar|necesitaria|exijo|demando|podes|podrias) [que le] [le] [una] (transfieras|transferir|transferencia|transferirle|enviarle|mandarle|mandar|mandes|girar|enviar|envies|mandar|mandes|girarle|girarle|gires|pasarle|pasar|pases|deposites|depositar|depositarle) * [pesos] (a|para) * [*]
-- <call>monttransfer <star3><star5></call>
-
 
 
 > object monttransfer javascript
         console.log('monttransfer' + args);
         if(tipo === 'I'){
 
-          
-            showreply("El saldo de tu cuenta es " + Cuenta + " pesos");
+          if(paso === 0){
+            showreply("Beneficiario " + args[0] + " Batista? Para confirmar di Confirmar transferencia");
+         }
         }else{
             showreply("No posees una cuenta en el banco. Si deseas que inicie una solicitud tan solo dilo");
         }
 
    
 < object
+
+
++ [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|sabes|cobro) [*] sueldo [*]
+- Aun no has cobrado.
+
++ [*] sueldo [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|cobro) [*]
+- Aun no has cobrado.
+
++ [*] (sucursal|oficina) [*] (cerca|cercana|proxima|ir|banco) [*]
+- Te he enviado un correo con la ruta hacia la sucursal más cercana.
+
++ [*] (cerca|cercana|proxima|ir|banco) [*] (sucursal|oficina|) [*]
+- Te he enviado un correo con la ruta hacia la sucursal más cercana.
+
++ [*] (beneficio|beneficios) [*] (tarjeta|tarjetas) [*]
+- Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
+
++ [*] (tarjeta|tarjetas) [*] (beneficio|beneficios) [*] 
+- Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
+
++ [*] (descuento|descuentos|ofertas|barato|compras|shopping) [*]
+- Con las Tarjetas de Crédito Bci tienes descuentos en lugares como Patuelli 15%, Cineplanet 45%. Te he enviado todos los sitios con descuentos a tu correo.
+
++ [*] (cine|pelicula|peli) [*]
+- Con las tarjetas de BCI tienes 45% de descuento en Cineplanet
+
++ (cuanto llevo gastado en|cuanto voy gastando en|gastos en|que gaste en|total de debitos en|cuanto he gastado|cuanto tengo gastado en|dame cuanto voy gastando en|decime cuanto voy gastando en) *
+* <star2> == uber =>Llevas gastado 11700 pesos en <star2>
+* <star2> == cineplanet =>Llevas gastado 8000 pesos en <star2>
+- No tienes gastos generados en <star2>
+
++ contacto * transferir
+* <star1> == joaquin =>Contacto Joaquín encontrado. Di monto seguido del importe
+- El contacto no existe. Para crear di contacto crear.
+
++ (monto|el monto es) #
+% contacto joaquin encontrado. di monto seguido del importe
+- Para confirmar la transferencia a Joaquín por el monto de <star2> pesos di enviar a Joaquín
+
++ enviar a joaquin
+% para confirmar la transferencia a joaquin por el monto de * di enviar a joaquin
+- Transferencia realizada. Te he enviado un comprobante a tu correo.
+
 
 
 

@@ -74,6 +74,8 @@ exports.stripNasties = (string, utf8) ->
     string = string.replace(/[\\<>]+/g, "")
     return string
   string = string.replace(/[^A-Za-z0-9 ]+[\u00E1\u00E9\u00ED\u00F3\u00FA]/g, "")
+  #string = string.replace(/[\U0024]/g, "pesos")
+  
   return string
 
 ##

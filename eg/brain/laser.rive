@@ -13,6 +13,7 @@
 ! sub quién = quien
 ! sub cuándo = cuando
 ! sub cómo = como
+! sub llevó = llevo
 ! sub dónde = donde
 ! sub cuánto = cuanto
 ! sub por qué = por que
@@ -26,6 +27,7 @@
 ! sub ésos = esos
 ! sub ésas = esas
 ! sub aquél = aquel
+! sub cobró = cobro
 ! sub aquélla = aquella
 ! sub aquéllas = aquellas
 ! sub aquéllos = aquellos
@@ -37,11 +39,13 @@
 ! sub telefónico = telefonico
 ! sub contás = contas
 ! sub estás = estas
+! sub sí = si
 ! sub dólar = dolar
 ! sub dócil = docil
 ! sub corría = corria
 ! sub ángel = angel
 ! sub azúcar = azucar
+! sub joaquín = joaquin
 ! sub fácil = facil
 ! sub sabía = sabia
 ! sub perú = peru
@@ -114,6 +118,30 @@
 ! sub financiación = financiacion
 ! sub necesitaría = necesitaria
 ! sub ayúdame = ayudame
+! sub automóviles = automoviles
+! sub mamá = mama
+! sub crédito = credito
+! sub estaría = estaria
+! sub transfiérele = transfierele
+! sub pásale = pasale
+! sub mándale = dale
+! sub enviále = enviale
+! sub deposítele = depositele
+! sub métele = metele
+! sub necesitó = necesito
+! sub decís = decis
+! sub próximas = proximas
+! sub próxima = proximas
+! sub encantaría = encantaria
+! sub muchísimas = muchisimas
+! sub pasó = paso
+! sub $ = pesos
+! sub envió = envio
+! sub recibí = recibi
+! sub próxima = proxima
+! sub débitos = debitos
+! sub película = pelicula
+
 
 + [*] (hola) [sofia] [sofi] [*]
 - ¡Hola! Siempre es un placer hablar contigo, si esta es tu primera vez, dime ayuda.
@@ -130,6 +158,16 @@
 
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (planes|plan)
 - ¿Con qué tipo de plan necesitas ayuda?
+
++ (sofia|sofi)
+- Dime
+- Decime
+- Hola
+
++ (tengo todo lo que quieren las wachas|tengo todo lo que quieren las guachas)
+- fuman, toman y se arrebatan
+
+
 
 /*BOLUDECES*/
 
@@ -149,7 +187,7 @@
 /*TARJETAS*/
 
 /*Larga*/
-+ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre las|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta) [*]
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre las|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta)
 - Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
 
 /*Larga invertida*/
@@ -166,103 +204,121 @@
 + [*] (cuales) [*] (tarjetas) [*]
 - Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
 
++[*] tarjeta [*]
+- Por
+
 *******************************************
 /* TARJETAS VISA*/
 
-+ [*] (tarjetas/tarjeta) visa [*]
-- Contamos con 4 tipos de tarjeta BCI Visa. Classic, Gold, Platinum y Signature. Mencioname cuál te interesa y con mucho gusto te contaré más.
++ [*] (tarjetas|tarjeta|la|credito|debito) (visa|lavisa|ibiza) [*]
+- Contamos con 4 tipos de tarjeta BCI Visa. Classic, Gold, Platinum y Signature. Mencioname cuál te interesa y con mucho gusto te contaré más.Por ejemplo "Visa Gold".
 
 /* VISA CLASSIC */
 
-+ [*] visa (classic|clasic|clásica) [*]
++ [*] (visa|lavisa|ibiza) (classic|clasic|clásica) [*]
 - Una tarjeta especialmente diseñada para atender las necesidades de nuestros clientes más jóvenes, que comienzan a viajar y concretar sus proyectos. Entrega mayor seguridad ya que evita portar dinero en efectivo, aumentando además las posibilidades de compra al permitir diferir los pagos. Para conocer sus beneficios exclusivos, dime beneficios Visa Classic. Para conocer los requisitos de obtención, dime requisitos Visa Classic.
 
-+ [*] requisitos [*] visa (classic|clasic|clásica) [*]
++ [*] requisitos [*] (visa|lavisa|ibiza) (classic|clasic|clásica) [*]
 - Renta líquida mensual desde 400.000 pesos. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo, Profesionales Independientes con al menos 1 año de ejercicio de la profesión, y para comerciantes y/o industriales es igual que para el profesional independiente, pero requiere de 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios [*] visa (classic|clasic|clásica) [*]
++ [*] beneficios [*] (visa|lavisa|ibiza) (classic|clasic|clásica) [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje y Seguro de Accidentes en Viaje. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 /* VISA GOLD */
 
-+ [*] visa (gold|dorada) [*]
++ [*] (visa|lavisa|ibiza) (gold|dorada) [*]
 - Bci Visa Gold te entrega un completo conjunto de beneficios, seguros y servicios de viaje. ¡Solicita tu Tarjeta de Crédito Bci Visa Gold y comienza a disfrutar ahora! Para conocer sus beneficios exclusivos, dime beneficios visa gold. Para conocer los requisitos de obtención, dime requisitos Visa Gold.
 
-+ [*] requisitos visa (gold|dorada|oro) [*]
++ [*] requisitos (visa|lavisa|ibiza) (gold|dorada|oro) [*]
 - Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios visa (gold|dorada|oro) [*]
++ [*] beneficios (visa|lavisa|ibiza) (gold|dorada|oro) [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 /* VISA PLATINUM */
 
-+ [*] visa (platinum|platino) [*]
++ [*] (visa|lavisa|ibiza) (platinum|platino) [*]
 - Bci Visa Platinum cuenta con la tecnología Chip, que te permite realizar compras y avances en efectivo con la mayor seguridad disponible y en todos los comercios adheridos. ¡Pide ahora tu Tarjeta y disfrútala en tu próximo viaje! Para conocer sus beneficios exclusivos, dime beneficios Visa Platinum. Para conocer los requisitos de obtención, dime requisitos Visa Platinum.
 
-+ [*] requisitos visa (platinum|platino) [*]
++ [*] requisitos (visa|lavisa|ibiza) (platinum|platino) [*]
 - Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios visa (gold|dorada|oro) [*]
++ [*] beneficios (visa|lavisa|ibiza) (gold|dorada|oro) [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 /* VISA SIGNATURE */
 
-+ [*] visa signature [*]
++ [*] (visa|lavisa|ibiza) signature [*]
 - Con su Tarjeta VISA Signature podrá recibir protección y servicios con los más altos estándares. Además, podrá hacer uso de una gran cantidad de ofertas orientadas a satisfacer sus necesidades. Para conocer sus beneficios exclusivos, dime beneficios Visa Signature. Para conocer los requisitos de obtención, dime requisitos Visa Signature.
 
-+ [*] requisitos visa signature [*]
++ [*] requisitos (visa|lavisa|ibiza) signature [*]
 - Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios visa signature [*]
++ [*] beneficios (visa|lavisa|ibiza) signature [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 ************************************************************************
 
 /* TARJETAS MASTERCARD */
 
-+ [*] (tarjetas|tarjeta) mastercard [*]
-- Contamos con 3 tipos de tarjeta BCI MasterCard. Gold, Platinum y Black. Mencioname cuál te interesa y con mucho gusto te contaré más. 
++ [*] (tarjetas|tarjeta|la|credito|debito) (mastercard|mastercar|mastercam) [*]
+- Contamos con 3 tipos de tarjeta BCI MasterCard. Gold, Platinum y Black. Mencioname cuál te interesa y con mucho gusto te contaré más. Por ejemplo "MasterCard Gold".
 
 /* MASTERCARD GOLD */
 
-+ [*] mastercard (gold|dorada) [*]
++ [*] (mastercard|mastercar|mastercam) (gold|dorada) [*]
 - Con ella podrás acceder a un mundo de servicios y beneficios, además de realizar compras en Chile y el extranjero con la mayor seguridad, facilidad y conveniencia. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Gold. Para conocer los requisitos de obtención, dime requisitos MasterCard Gold.
 
-+ [*] requisitos mastercard (gold|dorada|oro) [*]
++ [*] requisitos (mastercard|mastercar|mastercam) (gold|dorada|oro) [*]
 - Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios mastercard (gold|dorada|oro) [*]
++ [*] beneficios (mastercard|mastercar|mastercam) (gold|dorada|oro) [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 /* MASTERCARD PLATINUM */
 
-+ [*] mastercard (platinum|platino) [*]
++ [*] (mastercard|mastercar|mastercam) (platinum|platino) [*]
 - Esta Tarjeta de Crédito cuenta con Chip, lo que permite, en conjunto con su clave secreta PinPass, realizar compras y avances con mayor seguridad en todos los comercios adheridos a esta nueva tecnología. ¡Solicita tu Tarjeta Bci MasterCard Platinum y disfruta de beneficios únicos!Para conocer sus beneficios exclusivos, dime beneficios MasterCard Platinum. Para conocer los requisitos de obtención, dime requisitos MasterCard Platinum.
 
-+ [*] requisitos mastercard (platinum|platino) [*]
++ [*] requisitos (mastercard|mastercar|mastercam) (platinum|platino) [*]
 - Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios mastercard (platinum|platino) [*]
++ [*] beneficios (mastercard|mastercar|mastercam) (platinum|platino) [*]
 - Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 
 /* MASTERCARD BLACK */
 
-+ [*] mastercard (black|negra) [*]
++ [*] (mastercard/mastercar|mastercam) (black|negra) [*]
 - Su nueva Tarjeta Bci Mastercard Black le permitirá contar con un asistente personal a su disposición, junto a los mejores seguros y servicios del mercado. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Black. Para conocer los requisitos de obtención, dime requisitos MasterCard Black.
 
-+ [*] requisitos mastercard (black|negra) [*]
++ [*] requisitos (mastercard/mastercar|mastercam) (black|negra) [*]
 - Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios mastercard (black|negra) [*]
++ [*] beneficios (mastercard/mastercar|mastercam) (black|negra) [*]
 - Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
 
 *********************************************************************************
 
+/* EXCLUSIVAS BCI */
+
++ [*] (tarjetas|tarjeta|la|credito|debito) (exclusivas|exclusiva)[*]
+- Tenemos 6 tarjetas BCI exclusivas para ti,  Mencioname cuál te interesa y con mucho gusto te contaré más.Por ejemplo "Visa Gold".
+
++ [*] (mastercard/mastercar|mastercam) (black|negra) [*]
+- Su nueva Tarjeta Bci Mastercard Black le permitirá contar con un asistente personal a su disposición, junto a los mejores seguros y servicios del mercado. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Black. Para conocer los requisitos de obtención, dime requisitos MasterCard Black.
+
++ [*] requisitos (mastercard/mastercar|mastercam) (black|negra) [*]
+- Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios (mastercard/mastercar|mastercam) (black|negra) [*]
+- Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+
+
 
 /*REDCOMPRA*/
 
-+ [*] (tarjetas|tarjeta) (redcompra|red compra) [*]
++ [*] (tarjetas|tarjeta|la|credito|debito) (redcompra|red compra|red contra) [*]
 - Tu Tarjeta Redcompra Bci está asociada a una Cuenta Corriente Bci y con ella puedes manejar tu dinero de forma fácil, simple y segura. Realiza tus compras, pagos, giros y depósitos en cualquier minuto y durante todo el año. Además, para hacer tu vida más simple, puedes pagar tus cuentas y productos en línea usando el servicio Webpay. ¡Úsala para todo!
 
 ***********************************************************************************
@@ -290,6 +346,30 @@
 /*Corta*/
 + [*] (que|cual|cuales) (prestamo|prestamos) (tienen|tenes|hay) [*]
 -información de préstamos
+
+/*Speech*/
+
++ [*] pendiente [*] pago [*]
+- Si. Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura ahora"
+
++ pagar factura ahora
+- Por favor ingresa tu PIN.
+
++ [*] comprar [*] casa [*]
+- En BCI contamos con créditos hipotecarios con una financiación de hasta el 90% y un plazo de hasta 30 años. Además tienes un mes sin pago disponible por año. ¿Te gustaría que te envíe mas información a tu correo electrónico?
+
++ me encantaria
+- El correo ha sido enviado.
+
++ [*] muchisimas gracias [*]
+- Siempre es un placer.
+
++ gracias [*]
+- Siempre es un placer.
+
++[*]y sabes lo que me paso
+-disco al 100
+
 
 
 

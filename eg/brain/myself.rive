@@ -4,8 +4,38 @@
 - <call>noentiendo</call> ¿Podrías repetírmelo?
 - <call>noentiendo</call> Prueba decirlo de otra manera
 
+> object risa javascript
+       console.log("saludar ejecuto");
+        $("#risa").show();
+        $("#normal").hide();
 
+        setTimeout(function(){ $("#risa").hide();$("#normal").show(); }, 3040);
 
+< object
+> object gota javascript
+       console.log("saludar ejecuto");
+        $("#gota").show();
+        $("#normal").hide();
+
+        setTimeout(function(){ $("#gota").hide();$("#normal").show(); }, 1760);
+
+< object
+> object enojo javascript
+       console.log("saludar ejecuto");
+        $("#enojo").show();
+        $("#normal").hide();
+
+        setTimeout(function(){ $("#enojo").hide();$("#normal").show(); }, 1320);
+
+< object
+> object dedito javascript
+       console.log("saludar ejecuto");
+        $("#dedito").show();
+        $("#normal").hide();
+
+        setTimeout(function(){ $("#dedito").hide();$("#normal").show(); }, 2270);
+
+< object
 
 > object noentiendo javascript
        console.log("saludar ejecuto");

@@ -180,6 +180,11 @@
  <img id="normal" src="./normal.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;" onclick=""/> 
  <img id="saludo" src="./Hey.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/> 
  <img id="what" src="./what.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/>
+
+  <img id="risa" src="./risa.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/>
+   <img id="gota" src="./gota.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/>
+    <img id="enojo" src="./enojo.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/>
+     <img id="dedito" src="./dedito.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick=""/>
 </div>
 <div class="container" id="chatbox">
 
@@ -187,7 +192,7 @@
  
 
 </div>
-<input type="text" size="40" style="position: absolute;bottom: 0px;width: 80%;height: 100px;font-size:40px;border-color: #912289;" name="message" id="message" autocomplete="off" disabled placeholder="Porfavor espere... cargando...">
+<input type="text" size="40" style="position: absolute;bottom: 0px;width: 80%;height: 100px;font-size:40px;border-color: #912289;" name="message" id="message" autocomplete="off" disabled placeholder="Por favor espere... cargando...">
 <div style="text-align: center;">
 	<button style="bottom: 0px;position:absolute;width: 20%;right:0px;border-radius:0px;height:100px;background-color: rgb(145, 34, 137);color:#FFF;" id="boton" type="button" class="btn" onclick="sendAudio(event)"><i style="font-size: 60px;" class="fa fa-microphone" aria-hidden="true"></i><br>
 	<button style="bottom: 0px;position:absolute;width: 20%;right:0px;border-radius:0px;height:100px;display:none;background-color: rgb(145, 34, 137);color:#FFF;" id="boton2" type="button" class="btn btn-violet" onclick="sendMessage()"><i style="font-size: 60px;" class="fa fa-paper-plane" aria-hidden="true"></i><br>
@@ -197,15 +202,16 @@
 
 
 <script type="text/javascript">
-var UF=26268.28
-var UTM=45999.00
-var IPSA=4213.17
-var USD=650.72
-var EURO=722.62
+var UF=26268.28;
+var UTM=45999.00;
+var IPSA=4213.17;
+var USD=650.72;
+var EURO=722.62;
+var paso = 0;
 var facturas = [{"Plan Claro":14990}]
 var contactos = [{"Contacto":"Carlos","Cuenta":654848134136}]
 var movimientos = [{"Id":"Uber","Desc":"Viaje Uber","Importe":990,"tipo":"D"},{"Id":"Market","Desc":"Viaje Uber","Importe":990,"tipo":"D"}]
-
+var cuenta;
 
 
 if(typeof(Storage) !== "undefined") {
@@ -215,7 +221,7 @@ if(typeof(Storage) !== "undefined") {
         var ape = localStorage.ape;
         var ruc = localStorage.ruc;
         var mail = localStorage.mail;
-        var Cuenta = 940000;
+        cuenta = 940000;
    } else {
        console.log("usuario vacio");
        $('.suscribe-splash').show();
@@ -394,9 +400,6 @@ var rs = new RiveScript({
 // Load our files from the brain/ folder.
 rs.loadFile([
 	"brain/begin.rive",
-	"brain/admin.rive",
-	"brain/clients.rive",
-	"brain/eliza.rive",
 	"brain/myself.rive",
 	"brain/javascript.rive",
 	"brain/prueba.rive",
@@ -470,6 +473,7 @@ function escapeHtml(text) {
 
 function showreply(reply) {
 		console.log("showreply");
+        if(reply !== ''){
 		reply = reply.replace(/\n/g, "<br>");
 		$(".container").append('<div class="bubble yellow"><p style="font-size:40px;color:#FFF">'+reply+'</p></div>');
 		
@@ -495,7 +499,7 @@ function showreply(reply) {
 
 			speechSynthesis.speak(msg);
 		}
-
+        }
 
 }
  
