@@ -104,10 +104,10 @@
 
 
 + [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|sabes|cobro) [*] sueldo [*]
-- Aun no has cobrado.
+- Si, te han depositado el sueldo hoy a las 11 am.
 
 + [*] sueldo [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|cobro) [*]
-- Aun no has cobrado.
+- Si, te han depositado el sueldo hoy a las 11 am.
 
 + [*] (sucursal|oficina) [*] (cerca|cercana|proxima|ir|banco) [*]
 - Te he enviado un correo con la ruta hacia la sucursal más cercana.
@@ -129,7 +129,7 @@
 
 + (cuanto llevo gastado en|cuanto voy gastando en|gastos en|que gaste en|total de debitos en|cuanto he gastado|cuanto tengo gastado en|dame cuanto voy gastando en|decime cuanto voy gastando en) *
 * <star2> == uber =>Llevas gastado 11700 pesos en <star2>
-* <star2> == cineplanet =>Llevas gastado 8000 pesos en <star2>
+* <star2> == cineplanet =>Llevas gastado 3200 pesos en <star2>
 - No tienes gastos generados en <star2>
 
 + contacto * transferir
@@ -145,5 +145,14 @@
 - Transferencia realizada. Te he enviado un comprobante a tu correo.
 
 
+! let pendiente = 0
+
++ [*] (pendiente|falta|debo|deberia) [*] (pago|pagar) [*]
+* <get pendiente> == 0 =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
+- No tienes facturas pendientes.
+
++ pagar factura *
+* <get pendiente> == 0 => <set pendiente=1> Pago realizado con exito
+- La factura ya se encuentra paga
 
 

@@ -349,11 +349,6 @@
 
 /*Speech*/
 
-+ [*] pendiente [*] pago [*]
-- Si. Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura ahora"
-
-+ pagar factura ahora
-- Por favor ingresa tu PIN.
 
 + [*] comprar [*] casa [*]
 - En BCI contamos con créditos hipotecarios con una financiación de hasta el 90% y un plazo de hasta 30 años. Además tienes un mes sin pago disponible por año. ¿Te gustaría que te envíe mas información a tu correo electrónico?
