@@ -124,9 +124,6 @@
 + [*] (descuento|descuentos|ofertas|barato|compras|shopping) [*]
 - Con las Tarjetas de Crédito Bci tienes descuentos en lugares como Patuelli 15%, Cineplanet 45%. Te he enviado todos los sitios con descuentos a tu correo.
 
-+ [*] (cine|pelicula|peli) [*]
-- Con las tarjetas de BCI tienes 45% de descuento en Cineplanet
-
 + (cuanto llevo gastado en|cuanto voy gastando en|gastos en|que gaste en|total de debitos en|cuanto he gastado|cuanto tengo gastado en|dame cuanto voy gastando en|decime cuanto voy gastando en) *
 * <star2> == uber =>Llevas gastado 11700 pesos en <star2>
 * <star2> == cineplanet =>Llevas gastado 3200 pesos en <star2>
@@ -144,15 +141,16 @@
 % para confirmar la transferencia a joaquin por el monto de * di enviar a joaquin
 - Transferencia realizada. Te he enviado un comprobante a tu correo.
 
++ [*] (pendiente|falta|debo|deberia) [*] (pago|pagar|factura) [*]
+* <get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
+- No tienes facturas pendientes.
 
-! let pendiente = 0
-
-+ [*] (pendiente|falta|debo|deberia) [*] (pago|pagar) [*]
-* <get pendiente> == 0 =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
++ [*] (pago|pagar|factura) [*] (pendiente|falta|debo|deberia) [*]
+* <get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
 - No tienes facturas pendientes.
 
 + pagar factura *
-* <get pendiente> == 0 => <set pendiente=1> Pago realizado con exito
+* <get pendiente> == undefined => <set pendiente=1> Pago realizado con exito
 - La factura ya se encuentra paga
 
 
