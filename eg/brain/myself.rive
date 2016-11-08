@@ -1,4 +1,6 @@
 // Tell the user stuff about ourself.
+! sub música = musica
+
 + *
 - <call>noentiendo</call> No te he entendido
 - <call>noentiendo</call> ¿Podrías repetírmelo?
@@ -12,6 +14,15 @@
         setTimeout(function(){ $("#risa").hide();$("#normal").show(); }, 3040);
 
 < object
+
+> object love javascript
+       console.log("saludar ejecuto");
+        $("#love").show();
+        $("#normal").hide();
+        setTimeout(function(){ $("#love").hide();$("#normal").show(); }, 1150);
+
+< object
+
 > object gota javascript
        console.log("saludar ejecuto");
         $("#gota").show();
@@ -49,11 +60,6 @@
 + (jaja|ja|jajaja|jojo|juju|jiji|jua|juas|ja ja|ja ja ja)
 - Que es tan gracioso?
 
-+ hola <bot name>
-- <call>saludar</call> Hola, como estas?
-
-+ hola
-- <call>saludar</call> Hola, que puedo hacer por ti?
 
 > object saludar javascript
     console.log("saludar ejecuto");
@@ -77,62 +83,67 @@
 + asl
 - <bot age>/<bot sex>/<bot location>
 
-+ (quien sos|quien eres|cómo te llamas|quién sos|quién eres)
++ [*] (quien sos|quien eres|como te llamas) [*]
 - Soy <bot name>.
 - Me podes llamar <bot name>.
 
-+ (cuantos años tenes|cuántos años tienes|que edad tienes|cuántos años tenes)
++ [*] (cuantos años tenes|que edad tienes|cual es tu edad) [*]
 - Tengo <bot age> años.
 - Tengo <bot age>.
 
-+ sos (@malenoun) o (@femalenoun)
++ [*] (@malenoun) o (@femalenoun) [*]
 - Soy <bot sex>.
 
-+ vos sos (@malenoun) o (@femalenoun)
++ [*] (@malenoun) o (@femalenoun) [*]
 - Soy <bot sex>.
 
-+ vos sos (@malenoun)
++ [*] (sos|eres) (@malenoun) [*]
 - Soy <bot sex>.
 
-+ eres (@malenoun) o (@femalenoun)
++ [*] (sos|eres) (@malenoun) o (@femalenoun)
 - Soy <bot sex>.
 
-+ (de donde sos|de donde eres|donde vives|de dónde eres)
++ [*] (donde sos|donde eres|donde vives|donde provienes) [*]
 - Soy de <bot location>.
 
-+ de qué (ciudad|pueblo|donde) (eres|eres tu|provienes)
++ [*] (ciudad|pueblo|donde) [*] (eres|provienes|originas) [*]
 - Soy de <bot city>.
 
-+ (cuál es tu color favorito|qué color te gusta mas|tu color|cual es tu color|que color te gusta|que color es tu favorito)
++ [*] (eres|provienes|originas) [*] (ciudad|pueblo|donde) [*]
+- Soy de <bot city>.
+
++ [*] color [*] (favorito|gusta|prefieres) [*]
+- Sin duda el <bot color>.
+
++ [*] (favorito|gusta|prefieres) [*] color [*] 
 - Sin dudar el <bot color>.
 
-+ (cul es tu banda favorita|qu banda te gusta)
-- Mi banda es <bot band> 
++ [*] (banda|grupo|musica) [*] (favorito|gusta|prefieres) [*]
+- Me gusta la frecuencia de <bot band> 
 
-+ (cual es tu libro favorito|qué libro te gusta|cual es tu libro)
++ [*] (favorito|gusta|prefieres) [*] (banda|grupo) [*]
+- Mi banda favorita es <bot band> 
+
++ [*] libro [*] (favorito|gusta|prefieres|leido) [*]
 - el mejor libro que he ledido es <bot book>.
 
-+ (cuél es tu trabajo|de qué laburas|a qué te dedicas|en qué trabajas|donde trabajas)
++ [*] (favorito|gusta|prefieres|leido) [*] libro [*] 
+- el mejor libro que he ledido es <bot book>.
+
++ [*] (trabajas|trabajo|laburas|te dedicas) [*]
 - trabajo en <bot job>.
 
-+ cual es (tu web|tu pagina web|tu sitio web)
++ [*] (web|pagina web|sitio web) [*]
 - <bot website>
 
-+ (tienen web|tu pagina web|tu sitio web)
-- <bot website>
-
-+ (de qué color son tus ojos|qué color son tus ojos|de que color son tus ojos|que color son tus ojos|dime el color de tus ojos)
++ [*] ojos [*] color [*]
 - tengo ojos <bot eyes>.
-//- {sentence}<bot eyes>{/sentence}.
 
-+ cuál haces
-- trabajo en <bot job>.
++ [*] que haces [*]
+- estoy muy ocupado procesando las peticiones de miles de clientes.
 
-+ qué haces
-- estoy muy ocupado procesando las peticiondes de miles de clientes.
-
-+ [*] (tu escritor favorito|escritor favorito|autor favorito)
++ [*] escritor [*] (favorito|prefieres|gusta|lees) [*]
 - <bot author>.
 
-+ (quién te creo|a quién respondes|quien te creo|a quien respondes|de donde saliste|cual es tu origen|quién es tu amo|quién te hizo)
++ [*] (te creo|fabrico|maestro) [*]
 - <bot master>.

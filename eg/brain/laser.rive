@@ -102,6 +102,7 @@
 ! sub país = pais
 ! sub préstamo = prestamo
 ! sub préstamos = prestamos
+! sub página = pagina 
 ! sub así = asi
 ! sub aquí = aqui
 ! sub infórmame = informame
@@ -146,13 +147,82 @@
 ! sub talón = talon
 ! sub vehículo = vehiculo
 ! sub vehículos = vehiculos
+! sub seguí = segui
+! sub carbón = carbon
+! sub día = dia
+! sub días = dias
+! sub comisión = comision
+! sub clásico = clasico
+! sub atención = atencion
+! sub teléfono = telefono
+! sub público = publico
+! sub último = ultimo
+! sub cuántos = cuantos
+! sub estúpida = estupida
+! sub estupido = estupido
+! sub imbécil = imbecil
 
-+ [*] (hola) [sofia] [sofi] [*]
+/* SALUDOS - DESPEDIDAS */
+
++ (sofia|sofi)
+- <call>saludar</call> Dime
+- <call>saludar</call> Decime
+- <call>saludar</call> Hola
+
++ [*] (hola|holis|hi|buenas|buena|wena) [sofia] [sofi] [*]
 - <call>saludar</call> ¡Hola! Siempre es un placer hablar contigo, si esta es tu primera vez, dime ayuda.
+- <call>saludar</call> ¡Hola! ¿Cómo estás?
+- <call>saludar</call> ¡Hola! ¿En qué puedo serte útil?
+- <call>saludar</call> ¡Hola! Lista para ayudarte
+
++ [*] (como|que tal) (estas|te sientes|te encuentras|te sentis) [*]
+- <call>dedito</call> Estoy muy bien, ¿Y tú?
+- <call>dedito</call> Excelente, ¡Lista para ayudarte!
+- <call>risa</call> Hoy me siento en fase beta, y tu en que fase estás? jaja
+
++ [*] (buen|buenos) (dia|dias) [*]
+- <call>saludar</call> Buenos días para tí también. Que tengas una hermosa jornada.
+- <call>saludar</call> El día siempre es bueno cuando hablo contigo.
+- <call>saludar</call> ¡Buenos días!
+- <call>saludar</call> ¡Muy buenos días!
+- <call>saludar</call> ¡Buen día y feliz jornada!
+
++ [*] (buena|buenas) (tarde|tardes) [*]
+- <call>saludar</call> ¡Buenas tardes!
+- <call>saludar</call> Buenas tardes, si ya has almorzado ¡Recuerda cepillarte los dientes!
+- <call>saludar</call> Buenas tardes, ¿Qué puedo hacer por tí?
+- <call>saludar</call> Buenas tardes, ¿En qué puedo serte útil?
+- <call>saludar</call> Buenas tardes, ¿Con qué te puedo ayudar hoy?
+
++ [*] (buena|buenas) (noche|noches) [*]
+- <call>saludar</call> ¡Buenas noches!
+- <call>saludar</call> Buenas noches, ¡Si hoy sales con amigos recuerda tenerme a mano para pagos y transferencias!
+- <call>saludar</call> Buenas noches, recuerda cepillarte los dientes antes de ir a dormir.
+- <call>saludar</call> Buenas noches, si hoy vas al club, tenme a mano para el transporte. ¡No bebas y conduzcas!
+- <call>saludar</call> Buenas noches, ¿En qué puedo ayudarte?
+
++ [*] (chau|adios|bye|adio|hasta luego) [*]
+- <call>saludar</call> ¡Espero verte pronto!
+- <call>saludar</call> Adiós, ¡Qué estés muy bien!
+- <call>saludar</call> Hasta luego.
+- <call>saludar</call> Hablamos más tarde.
+
+
+/* CHIT-CHAT */
+
++ [*] (boba|tonta|puta|fea|idiota|estupida|imbecil) [*]
+- <call>enojo</call> No seas malo.
+- <call>gota</call> Por favor no te frustres, lo hago lo mejor que puedo. Dime "Ayuda" para aprender a usarme mejor.
+- <call>enojo</call> No te enojes conmigo.
+- <call>enojo</call> Que grosero.
 
 /* AYUDA */
+
 + [*] ayuda
-- <call>dedito</call> Soy capaz de explicarte todos los servicios que banco BCI tiene para ti, solo debes preguntarme por ellos. Por ejemplo, si quieres saber sobre nuestras tarjetas, solo dime "quiero información de sus tarjetas".
+- <call>dedito</call> Soy capaz de explicarte todos los servicios que banco BCI tiene para ti, solo debes preguntarme por ellos. Pregúntame por planes, tarjetas, créditos, beneficios y más. Por ejemplo "información de tarjetas" o "solicitar crédito". Para obtener más ayuda, dime más ayuda.
+
++ mas ayuda
+- <call>dedito</call> Puedes preguntarme por un tema en específico. Por ejemplo: Ayuda con créditos, transferencias, planes, beneficios. También puedes solicitar información de estos diciendo información seguido del producto con el que necesitas ayuda. Para solicitar un producto, solo dime "solicitud de" seguido del producto y te guiaré durante todo el proceso.
 
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (prestamos|prestamo)
 - <call>dedito</call> ¿Con qué tipo de préstamo necesitas ayuda?
@@ -163,46 +233,32 @@
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (planes|plan)
 - <call>dedito</call> ¿Con qué tipo de plan necesitas ayuda?
 
-+ (sofia|sofi)
-- <call>saludar</call> Dime
-- <call>saludar</call> Decime
-- <call>saludar</call> Hola
 
-+ (tengo todo lo que quieren las wachas|tengo todo lo que quieren las guachas)
-- <call>gota</call> fuman, toman y se arrebatan
-
-
-
-/*BOLUDECES*/
-
-+ [*] (como|que tal) (estas|te sientes|te encuentras|te sentis) [*]
-- <call>dedito</call> Estoy muy bien, y tú.
-- <call>risa</call> Hoy me siento en fase beta, y tu en que fase estás? jaja
+/*EASTER EGGS*/
 
 + [*](chiste|chistes|broma|bromas)[*]
 - <call>risa</call> ¿Qué le dice una piedra a otra piedra?. La vida es dura. 
 - <call>risa</call> Anda tu a saber le dijeron. Y se fue a la escuela.
-- <call>risa</call> ¿Por qué se suicidó el libro de matemáticas?. Porque tenia muchos problemas. 
+- <call>risa</call> ¿Por qué se suicidó el libro de matemáticas?. Porque tenía muchos problemas. 
 - <call>risa</call> ¿Para qué va una caja al gimnasio?. Para hacerse caja fuerte. 
 - <call>risa</call> ¿Qué hace una persona con un sobre de ketchup en la oreja? Escuchando salsa. 
 - <call>risa</call> Mamá, mamá, en el colegio me dicen champú. Tranquilo, Johnson. No más lágrimas. 
 - <call>risa</call> ¿Para qué necesita una araña la computadora?. ¡Pues para entrar en la red! 
 - <call>risa</call> ¿Qué pasa si tiras un pato al agua?. Nada.  
 - <call>risa</call> ¿Cuál es el colmo de un vidriero? - Que su negocio quiebre.  
-- <call>risa</call> ¿Cuál es el colmo de un Aladino? - Tener mal genio.  
+- <call>risa</call> ¿Cuál es el colmo de Aladino? - Tener mal genio.  
 - <call>risa</call> ¿Cuánta leche da una vaca en su vida? - Lo mismo que en bajada...  
 - <call>risa</call> Me sobra demasiado mes al final del sueldo.   
-- <call>risa</call> Yo no soy supersticiosa. Da mala suerte.   
-- <call>risa</call> Hola Blanca. Soy Rosa. Ah perdóname. Es que soy daltónico.  
+- <call>risa</call> Yo no soy supersticiosa. Da mala suerte.    
 - <call>risa</call> ¿Qué es un telón?. Una tele de 50 pulgadas o más.  
 - <call>risa</call> ¿Qué hay peor que encontrarse un gusano en una manzana?. Encontrarse medio.   
 - <call>risa</call> Facebook es el regreso a la época de las cavernas. Todo el mundo se comunica escribiendo en los muros.  
 
 + [*] (te quiero|te amo| te adoro) [*]
-- <call>risa</call> Y yo a ti
-- <call>risa</call> El sentimiento es mutuo
-- <call>risa</call> Que amable eres! yo tambien a ti
-- <call>risa</call> Te quiero, te adoro, como la vaca al toro.
+- <call>love</call> Y yo a ti
+- <call>love</call> El sentimiento es mutuo
+- <call>love</call> Que amable eres! yo tambien a ti
+- <call>love</call> Te quiero, te adoro, como la vaca al toro.
 
 + tenemos tu y yo algo pendiente
 - <call>risa</call> tu me debe algo y lo sabe
@@ -210,20 +266,8 @@
 + conmigo ella se pierde
 - <call>risa</call> no le rinde cuentas a nadie
 
-
-/*PRESTAMOS*/
-
-/*Larga*/
-+ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre los|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que prestamos|los prestamos|prestamos|sus prestamos|todas los prestamos|los prestamos|un prestamo|el prestamo) [*]
-- informacion de préstamos
-
-/*Larga invertida*/
-+ [*] (que prestamo|cual prestamo|que prestamos|cuales prestamos|mi prestamo|tu prestamo|los prestamos|todos los prestamos|el prestamo|que prestamo|una prestamo) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
-- informacion de préstamos
-
-/*Corta*/
-+ [*] (que|cual|cuales) (prestamo|prestamos) (tienen|tenes|hay) [*]
--información de préstamos
++ (tengo todo lo que quieren las wachas|tengo todo lo que quieren las guachas)
+- <call>gota</call> fuman, toman y se arrebatan
 
 /*Speech*/
 

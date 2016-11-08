@@ -130,11 +130,11 @@
 - No tienes gastos generados en <star2>
 
 + contacto * transferir
-* <star1> == joaquin =>Contacto Joaquín encontrado. Di monto seguido del importe
+* <star1> == joaquin =>Contacto Joaquín encontrado. Di monto seguido del importe en pesos.
 - El contacto no existe. Para crear di contacto crear.
 
 + (monto|el monto es) #
-% contacto joaquin encontrado. di monto seguido del importe
+% contacto joaquin encontrado. di monto seguido del importe en pesos.
 - Para confirmar la transferencia a Joaquín por el monto de <star2> pesos di enviar a Joaquín
 
 + enviar a joaquin
@@ -150,7 +150,38 @@
 - No tienes facturas pendientes.
 
 + pagar factura *
-* <get pendiente> == undefined => <set pendiente=1> Pago realizado con exito
-- La factura ya se encuentra paga
+- <call>pagarfactura <star1></call>
 
++ confirmaciondeteclado
+- <call>teclado</call>
+
++ [*] (twittear|twitter|tweet) [*] banco
+- <call>tweet</call>
+
++ [*] banco [*] (twittear|twitter|tweet)
+- <call>tweet</call>
+
++ [*] (cine|pelicula|peli) [*]
+- Con las tarjetas de Bci tienes 45% de descuento en Cineplanet
+
++ [*] (comida|hambre|comer) [*]
+- Con las tarjetas de Bci tienes 15% de descuento en el Restaurante Don Toro
+
++ [*] servicios [*] (ofrecen|disponen|tienen|otorgan|brindan|tiene|ofrece|otorga|brinda) [*]
+- En Bci encontrarás una amplia gama de productos y servicios, pensados para resolver todas tus necesidades financieras. Como Pago de Cuentas, Avances a Cuentas, Tarjeta Virtual, Recarga Bip, Recarga Celular, y mucho más. Si deseas saber más información de un servicio di el nombre de un servicio. 
+
++ [*] pago de cuentas [*]
+- Paga todas tus cuentas servicios a través de Bci.cl con cargo a tu Cuenta Corriente.
+
++ [*] avances a cuentas [*]
+- Traspasa dinero desde tu Tarjeta de Crédito Bci hacia tu Cuenta Corriente en un par de clics.
+
++ [*] tarjeta virtual [*]
+- ¿Quieres comprar por Internet de la forma más segura? Genera tu Tarjeta Virtual en Bci.cl.
+
++ [*] recarga bip [*]
+¡Nunca pierdas un viaje! Recarga tu Tarjeta Bip! en Bci.cl las 24 horas del día.
+
++ [*] recarga celular [*]
+- ¡No te quedes sin minutos! Recarga tu teléfono prepago de cualquier compañía en Bci.cl.
 

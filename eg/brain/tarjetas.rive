@@ -2,27 +2,34 @@
 
 /*Larga*/
 + [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre las|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta)
-- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 /*Larga invertida*/
 + [*] (que tarjeta|cual tarjeta|que tarjetas|cuales tarjetas|mi tarjeta|tu tarjeta|las tarjetas|todas las tarjetas|la tarjeta|que tarjeta|una tarjeta) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|me puedes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
-- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 /*Corta*/
 + [*] (que|cual|cuales) (tarjeta|tarjetas) (tienen|tenes|hay) [*]
-- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 + [*] (donde) [*] (tarjeta) [*]
-- <call>dedito</call> En cualquiera de nuestras 240 sucursales a lo largo de Chile.
+- <call>dedito</call> En cualquiera de nuestras 240 sucursales a lo largo de Chile. Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 + [*] (cuales) [*] (tarjetas) [*]
-- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más?
+- <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI AAdvantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
+
+*******************************************
+/* SOLICITUD */
+
++ [*] (solicitar|pedir|solicitarte|pedirte|adquirir|adquiero|pido|solicito|necesito|quiero|querer|solicitud) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta|de tarjeta) [*]
++ <call>dedito</call> 
+
 
 *******************************************
 /* TARJETAS VISA*/
 
-+ [*] (tarjetas|tarjeta|la|credito|debito) (visa|lavisa|ibiza) [*]
-- <call>dedito</call> Contamos con 4 tipos de tarjeta BCI Visa. Classic, Gold, Platinum y Signature. Mencioname cuál te interesa y con mucho gusto te contaré más.Por ejemplo "Visa Gold".
++ [*] (tarjetas|tarjeta|la|credito|debito|las) (visa|lavisa|ibiza) [*]
+- <call>dedito</call> Contamos con 4 tipos de tarjeta BCI Visa. Classic, Gold, Platinum y Signature. Mencioname cuál te interesa y con mucho gusto te contaré más. Por ejemplo "Visa Gold".
 
 /* VISA CLASSIC */
 
@@ -33,7 +40,7 @@
 - <call>dedito</call> Renta líquida mensual desde 400.000 pesos. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo, Profesionales Independientes con al menos 1 año de ejercicio de la profesión, y para comerciantes y/o industriales es igual que para el profesional independiente, pero requiere de 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios [*] (visa|lavisa|ibiza) (classic|clasic|clásica) [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje y Seguro de Accidentes en Viaje. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje y Seguro de Accidentes en Viaje. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 /* VISA GOLD */
 
@@ -44,7 +51,7 @@
 - <call>dedito</call> Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios (visa|lavisa|ibiza) (gold|dorada|oro) [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 /* VISA PLATINUM */
 
@@ -55,7 +62,7 @@
 - <call>dedito</call> Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios (visa|lavisa|ibiza) (gold|dorada|oro) [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 /* VISA SIGNATURE */
 
@@ -66,13 +73,13 @@
 - <call>dedito</call> Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios (visa|lavisa|ibiza) signature [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia Visa Internacional. Servicio de Asistencia en Viaje, Seguro de Accidentes en Viaje, Seguro de Arriendo de Automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 ************************************************************************
 
 /* TARJETAS MASTERCARD */
 
-+ [*] (tarjetas|tarjeta|la|credito|debito) (mastercard|mastercar|mastercam) [*]
++ [*] (tarjetas|tarjeta|la|credito|debito|las) (mastercard|mastercar|mastercam) [*]
 - <call>dedito</call> Contamos con 3 tipos de tarjeta BCI MasterCard. Gold, Platinum y Black. Mencioname cuál te interesa y con mucho gusto te contaré más. Por ejemplo "MasterCard Gold".
 
 /* MASTERCARD GOLD */
@@ -84,7 +91,7 @@
 - <call>dedito</call> Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios (mastercard|mastercar|mastercam) (gold|dorada|oro) [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 /* MASTERCARD PLATINUM */
 
@@ -95,40 +102,105 @@
 - <call>dedito</call> Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
 + [*] beneficios (mastercard|mastercar|mastercam) (platinum|platino) [*]
-- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
+- <call>dedito</call> Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 /* MASTERCARD BLACK */
 
-+ [*] (mastercard/mastercar|mastercam) (black|negra) [*]
++ [*] (mastercard|mastercar|mastercam) (black|negra) [*]
 - <call>dedito</call> Su nueva Tarjeta Bci Mastercard Black le permitirá contar con un asistente personal a su disposición, junto a los mejores seguros y servicios del mercado. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Black. Para conocer los requisitos de obtención, dime requisitos MasterCard Black.
 
-+ [*] requisitos (mastercard/mastercar|mastercam) (black|negra) [*]
++ [*] requisitos (mastercard|mastercar|mastercam) (black|negra) [*]
 - <call>dedito</call> Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios (mastercard/mastercar|mastercam) (black|negra) [*]
-- <call>dedito</call> Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
++ [*] beneficios (mastercard|mastercar|mastercam) (black|negra) [*]
+- <call>dedito</call> Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo. 
 
 *********************************************************************************
 
 /* EXCLUSIVAS BCI */
 
-+ [*] (tarjetas|tarjeta|la|credito|debito) (exclusivas|exclusiva)[*]
-- <call>dedito</call> Tenemos 6 tarjetas BCI exclusivas para ti,  Mencioname cuál te interesa y con mucho gusto te contaré más.Por ejemplo "Visa Gold".
++ [*] (tarjetas|tarjeta|la|credito|debito|las) (exclusivas|exclusiva)[*]
+- <call>dedito</call> Tenemos 6 tarjetas BCI exclusivas para ti. Visa Universal, Visa Diseños, Visa Minera, Visa ICI, Visa Carbono Neutral y Visa OpenSky. Mencioname cuál te interesa y con mucho gusto te contaré más. Por ejemplo "Visa Diseños".
 
-+ [*] (mastercard/mastercar|mastercam) (black|negra) [*]
-- <call>dedito</call> Su nueva Tarjeta Bci Mastercard Black le permitirá contar con un asistente personal a su disposición, junto a los mejores seguros y servicios del mercado. Para conocer sus beneficios exclusivos, dime beneficios MasterCard Black. Para conocer los requisitos de obtención, dime requisitos MasterCard Black.
+/*VISA UNIVERSAL*/
 
-+ [*] requisitos (mastercard/mastercar|mastercam) (black|negra) [*]
-- <call>dedito</call> Renta líquida mensual superior a 4.000.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
 
-+ [*] beneficios (mastercard/mastercar|mastercam) (black|negra) [*]
-- <call>dedito</call> Todas sus compras en el extranjero con su Tarjeta Bci MasterCard Black están exentas de comisión. Acceso Preferencial a Salones VIP Pacific Club en Chile. Tarjetas adicionales sin costo y con límite de gasto mensual. Centro de Asistencia MasterCard Global. Servicio de Asistencia en Viajes, Programa Médico Integral de Viajes, Seguro de Arriendo de Automóviles y Protección contra Inconvenientes de Viajes. Para saber más acerca de alguno de estos beneficios, solo menciónamelo. 
++ [*] (ibiza|visa) (universal) [*]
+- <call>dedito</call> Es una Tarjeta de Crédito Clásica, que facilita el orden y control de sus gastos. Esta Tarjeta de Crédito permite al usuario comparar fácilmente entre distintos oferentes del producto Tarjeta de Crédito con Crédito Universal, ya que ofrece atributos estándar. Para conocer sus beneficios exclusivos, dime beneficios Visa Universal. Para conocer los requisitos de obtención, dime requisitos Visa Universal.
 
++ [*] requisitos (ibiza|visa) (universal) [*]
+- <call>dedito</call> Renta líquida mensual superior a 400.000 pesos. Universitario sin renta desde 4° año de carrera. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Sin informes comerciales y/o bancarios negativos.
+
++ [*] beneficios (ibiza|visa) (universal) [*]
+- <call>dedito</call> Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Centro de Asistencia de Visa Internacional. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
+/*VISA DISEÑOS*/
+
++ [*] (ibiza|visa) (diseño|diseños) [*]
+- <call>dedito</call>En Bci somos diferentes, por eso tenemos para ti la más amplia colección de Diseños para tus Tarjetas de Crédito Bci Visa. Para obtenerla, comunícate con tu ejecutivo de cuenta, llama al Bci Directo al 600 692 8000 o si prefieres, acércate a cualquier sucursal BCI. Importante: Para solicitar esta tarjeta no es necesario ser cliente Bci. Para conocer sus beneficios exclusivos, dime beneficios Visa Diseño. Para conocer los requisitos de obtención, dime requisitos Visa Diseño. Para conocer los diseños disponibles, dime Diseños de Visa.
+
++ [*] requisitos (ibiza|visa) (diseño|diseños) [*]
+- <call>dedito</call>Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios (ibiza|visa) (diseño|diseños) [*]
+- <call>dedito</call>Acceso Preferencial a los Salones VIP Pacific Club. Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Centro de Asistencia de Visa Internacional. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje y Seguro de Arriendo de Automóviles. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
++ [*] (diseño|diseños) [*] (ibiza|visa) [*]
+- <call>dedito</call>Diseños de Looney Toones y La liga de la justicia. Superman, Batman, Flash, Mujer maravilla, Silvestre, Piolín, Pato Lucas, Taz y Bugs Bunny. Para verlos, visita BCI.cl.
+
+/* VISA MINERA*/
+
++ [*] (ibiza|visa) (minera) [*]
+- <call>dedito</call>La Nueva Tarjeta de Crédito Bci Visa Minera es una innovación especialmente pensada para entregar beneficios a la medida, y descuentos exclusivos en comercios en la zona norte del país. Para conocer sus beneficios exclusivos, dime beneficios Visa Minera. Para conocer los requisitos de obtención, dime requisitos Visa Minera.
+
++ [*] requisitos (ibiza|visa) (diseño|diseños) [*]
+- <call>dedito</call>Renta líquida mensual superior a 550.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios (ibiza|visa) (diseño|diseños) [*]
+- <call>dedito</call>Acceso Preferencial a los Salones VIP Pacific Club. Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Centro de Asistencia de Visa Internacional. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje y Seguro de Arriendo de automóviles Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
+/* VISA ICI*/
+
++ [*] (ibiza|visa) (ici|y si|easy|i say|y 6|y seguí) [*]
+- <call>dedito</call>Tarjeta de Crédito especialmente diseñada para socios de la Corporación y Red ICI, Ingenieros Civiles Industriales o ex alumnos del Departamento de Ingeniería Industrial de la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile, acostumbrados a disfrutar de los servicios de la más alta calidad. Para conocer sus beneficios exclusivos, dime beneficios Visa ICI.
+
++ [*] beneficios (ibiza|visa) (ici|y si|easy|i say|y 6|y seguí) [*]
+- <call>dedito</call>Acceso Preferencial a los Salones VIP Pacific Club. Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Centro de Asistencia de Visa Internacional. Asistente Personal Visa Concierge. Sitio Internet Exclusivo de Visa Platinum. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje. Seguro de Arriendo de automóviles y Asistencia Médica de Emergencia. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
+/* VISA CARBONO NEUTRAL*/
+
++ [*] (ibiza|visa) (carbono|carbon) [neutral] [*]
+- <call>dedito</call>Si estás preocupado por el medioambiente, esta oportunidad es para ti: la Tarjeta de Crédito Bci Carbono Neutral es la única que permite contribuir a disminuir el cambio climático, facilitando la reducción de emisión de CO2-e, compensando los niveles de Gases de Efecto Invernadero. Para conocer sus beneficios exclusivos, dime beneficios Visa Carbono Neutral. Para conocer los requisitos de obtención, dime requisitos Visa Carbono Neutral.
+
++ [*] requisitos (ibiza|visa) (carbono|carbon) [neutral] [*]
+- <call>dedito</call>Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios (ibiza|visa) (carbono|carbon) [neutral] [*]
+- <call>dedito</call>Acceso Preferencial a los Salones VIP Pacific Club. Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Centro de Asistencia de Visa Internacional. Asistente Personal Visa Concierge. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje. Seguro de Arriendo de automóviles y Seguro Médico de Emergencia. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
+/* VISA OPENSKY*/
+
++ [*] (ibiza|visa|visao) (opensky|open sky|penske)[*]
+- <call>dedito</call>Si disfruta del placer de viajar por el mundo, esta tarjeta es para usted: la Tarjeta de Crédito Bci Visa OpenSky le permite acceder siempre a los mejores programas de beneficios, en la Línea Aérea, Agencia de Viaje, Hotel o Rent a Car de su preferencia. Para conocer sus beneficios exclusivos, dime beneficios Visa OpenSky. Para conocer los requisitos de obtención, dime requisitos Visa OpenSky.
+
++ [*] requisitos (ibiza|visa|visao) (opensky|open sky|penske)[*]
+- <call>dedito</call>Renta líquida mensual superior a 1.200.000 pesos. Edad: Igual o superior a 18 y menor de 70 años. Chileno o extranjero con residencia permanente. Tener patrimonio positivo. Sin informes comerciales y/o bancarios negativos. Antigüedad laboral: Empleados con 1 año de antigüedad en el empleo. Profesionales Independientes: al menos 1 año de ejercicio de la profesión. Comerciantes y/o industriales: igual que profesional independiente, pero requiere 2 años de antigüedad en su negocio o actividad.
+
++ [*] beneficios (ibiza|visa|visao) (opensky|open sky|penske)[*]
+- <call>dedito</call>Acceso Preferencial a los Salones VIP Pacific Club. Tarjetas Adicionales Sin Costo y con Límite de Gasto Mensual. Acumula pesos Opensky que luego podrá canjear por exclusivas oportunidades de viaje. Centro de Asistencia de Visa Internacional. Asistente Personal Visa Concierge. Servicios de Asistencia en Viaje. Seguro de Accidentes en Viaje y Seguro de Arriendo de automóviles. Para saber más acerca de alguno de estos beneficios, solo Mencionamelo.
+
+
+****************************************************************************************
+
+/*BCI AADVANTAGE*/
+
++ [*] (tarjetas|tarjeta|la|credito|debito|las) (advantage|advantaje|advantek)[*]
+- <call>dedito</call> El líder en experiencia de Clientes y la línea aérea más grande del mundo se unen. Las tarjetas BCI AAdvantage son las tarjetas Visa Platinum, Visa Signature y MasterCard Black de Banco BCI junto con beneficios exclusivos de American Airlines. Realice compras en el extranjero sin comisión y goce de todos los seguros de viaje disponibles. Estas tarjetas sólo están disponibles bajo el Nuevo Plan Bci AAdvantage. Para saber más, dime Plan Bci Advantage.
 
 
 /*REDCOMPRA*/
 
-+ [*] (tarjetas|tarjeta|la|credito|debito) (redcompra|red compra|red contra) [*]
++ [*] (tarjetas|tarjeta|la|credito|debito|las) (redcompra|red compra|red contra|redcompras|red compras|red contras) [*]
 - <call>dedito</call> Tu Tarjeta Redcompra Bci está asociada a una Cuenta Corriente Bci y con ella puedes manejar tu dinero de forma fácil, simple y segura. Realiza tus compras, pagos, giros y depósitos en cualquier minuto y durante todo el año. Además, para hacer tu vida más simple, puedes pagar tus cuentas y productos en línea usando el servicio Webpay. ¡Úsala para todo!
 
 ***********************************************************************************
