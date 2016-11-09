@@ -161,6 +161,12 @@
 ! sub estúpida = estupida
 ! sub estupido = estupido
 ! sub imbécil = imbecil
+! sub perdón = perdon
+! sub discúlpame = disculpame
+! sub perdóname = perdoname
+! sub características = caracteristicas
+! sub varía = varia
+
 
 /* SALUDOS - DESPEDIDAS */
 
@@ -169,7 +175,7 @@
 - <call>saludar</call> Decime
 - <call>saludar</call> Hola
 
-+ [*] (hola|holis|hi|buenas|buena|wena) [sofia] [sofi] [*]
++ [*] (hola|holis|hi|wena) [sofia] [sofi] [*]
 - <call>saludar</call> ¡Hola! Siempre es un placer hablar contigo, si esta es tu primera vez, dime ayuda.
 - <call>saludar</call> ¡Hola! ¿Cómo estás?
 - <call>saludar</call> ¡Hola! ¿En qué puedo serte útil?
@@ -201,20 +207,25 @@
 - <call>saludar</call> Buenas noches, si hoy vas al club, tenme a mano para el transporte. ¡No bebas y conduzcas!
 - <call>saludar</call> Buenas noches, ¿En qué puedo ayudarte?
 
-+ [*] (chau|adios|bye|adio|hasta luego) [*]
++ [*] (chau|adios|bye|adio|hasta luego|chavo|chao|couchsurfing|samsung fit) [*]
 - <call>saludar</call> ¡Espero verte pronto!
 - <call>saludar</call> Adiós, ¡Qué estés muy bien!
 - <call>saludar</call> Hasta luego.
 - <call>saludar</call> Hablamos más tarde.
 
-
 /* CHIT-CHAT */
 
 + [*] (boba|tonta|puta|fea|idiota|estupida|imbecil) [*]
-- <call>enojo</call> No seas malo.
-- <call>gota</call> Por favor no te frustres, lo hago lo mejor que puedo. Dime "Ayuda" para aprender a usarme mejor.
-- <call>enojo</call> No te enojes conmigo.
-- <call>enojo</call> Que grosero.
+- <call>enojo</call> No seas malo. {topic=sorry}
+- <call>gota</call> Por favor no te frustres, lo hago lo mejor que puedo. Dime "Ayuda" para aprender a usarme mejor. {topic=sorry}
+- <call>enojo</call> No te enojes conmigo. {topic=sorry}
+- <call>enojo</call> Que grosero. {topic=sorry}
+
++ [*] (que) [*] (linda|bonita|adorable|mona|divina|hermosa) [*]
+- <call>love</call> ¡Gracias!
+- <call>love</call> ¡Jajaja que verguenza!
+- <call>love</call> Me diseñaron para lucir adorable y amable, ¡Gracias por notarlo!
+
 
 /* AYUDA */
 

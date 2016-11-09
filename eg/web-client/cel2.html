@@ -434,10 +434,17 @@ function GetVoices(){
 
 function sendAudio(e){
 	e.preventDefault();
-	annyang.start({continuous: false});
-	prendido = 'S';
-	console.log('start annyang');
-	$('#boton').css({"background-color":"#c81515"});
+    if(prendido === 'N'){
+        annyang.start({continuous: false});
+        prendido = 'S';
+        console.log('start annyang');
+        $('#boton').css({"background-color":"#c81515"});
+    }else{
+        annyang.abort();
+        prendido = 'N';
+        $('#boton').css({"background-color":"#912289"});
+    }
+	
 }
 
 var runCommand = function(command){
@@ -482,7 +489,8 @@ rs.loadFile([
     "brain/internetbanking.rive",
 	"brain/tarjetas.rive",
 	"brain/beneficios.rive",
-	"brain/planes.rive"
+	"brain/planes.rive",
+    "brain/creditos.rive"
 	], on_load_success, on_load_error);
 
 var operation =""

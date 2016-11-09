@@ -1,11 +1,11 @@
 ﻿/*TARJETAS*/
 
 /*Larga*/
-+ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre las|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que) (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta)
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) [*] (que tarjetas|las tarjetas|tarjetas|sus tarjetas|todas las tarjetas|las tarjetas|una tarjeta|la tarjeta)
 - <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 /*Larga invertida*/
-+ [*] (que tarjeta|cual tarjeta|que tarjetas|cuales tarjetas|mi tarjeta|tu tarjeta|las tarjetas|todas las tarjetas|la tarjeta|que tarjeta|una tarjeta) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|me puedes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
++ [*] (que tarjeta|cual tarjeta|que tarjetas|cuales tarjetas|mi tarjeta|tu tarjeta|las tarjetas|todas las tarjetas|la tarjeta|que tarjeta|una tarjeta) [*] (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
 - <call>dedito</call> Contamos con 5 tipos de tarjeta, BCI Visa, BCI MasterCard, Exclusivas BCI, BCI Advantage y RedCompra BCI, ¿De cuál te interesa saber más? Si quieres solicitar una tarjeta dime "Solicitud de tarjeta".
 
 /*Corta*/

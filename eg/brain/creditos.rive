@@ -1,0 +1,62 @@
+﻿/*PLANES*/
+
+/*Larga*/
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) [*] (que creditos|los creditos|creditos|sus creditos|todas los creditos|un credito|el credito|credito)
+- <call>dedito</call> ¿Qué crédito te interesa? Dime "Créditos de Consumo" o "Créditos Hipotecarios"
+
+/*Larga invertida*/
++ [*] (que credito|cual credito|que creditos|cuales creditos|mi credito|tu credito|los creditos|todos los creditos|el credito|que creditos|un credito) [*] (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
+- <call>dedito</call> ¿Qué crédito te interesa? Dime "Créditos de Consumo" o "Créditos Hipotecarios"
+
+/*Corta*/
++ [*] (que|cual|cuales) (credito|creditos) (tienen|tenes|hay) [*]
+- <call>dedito</call> ¿Qué crédito te interesa? Dime "Créditos de Consumo" o "Créditos Hipotecarios"
+
+/* CREDITO DE CONSUMO */
+
++ [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo) [*]
+- <call>dedito</call>Para financiar todos tus proyectos y planes, en Bci tenemos un Crédito que se ajusta a cada una de tus necesidades. Dime "Características Crédito de Consumo" para saber más o "Solicitud Crédito de Consumo" para solicitarlo.
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo) [*]
+- <call>dedito</call>Con nuestros créditos de cnsumo tienes hasta 90 días para el pago de la primera cuota. Hasta 2 meses fijos libres de pago al año. Posterga hasta el valor equivalente a 4 cuotas al año con la Cuota Flexible hasta las 14 horas del mismo día del vencimiento. Curse con abono inmediato las 24 horas a través de Bci.cl, App Bci Móvil, cajeros automáticos Bci, para clientes con monto pre aprobado y datos actualizados. Solicítalo ahora diciendo "Solicitar Crédito de Consumo"
+
+/* CRÉDITO HIPOTECARIO */
+
++ [*] (credito|creditos) [*] (hipotecario|hipotecarios) [*]
+- <call>dedito</call>Tenemos 5 tipos de créditos hipotecarios: Tasa Fija, Tasa Variable, Construcción, Paga la mitad e Hipotecario Universal ¿De cuál te interesa saber más?. Por ejemplo "Crédito Tasa Fija".
+
+/* TASA FIJA */
++ [*] (credito|creditos) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call>Si lo que necesitas es adquirir una vivienda o reprogramar tus deudas a través de una cuota fija que elijas para todo el período del crédito, el Crédito Hipotecario Bci Tasa Fija es tu opción. Para conocer sus características dime "Características Tasa Fija".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call> Destinado a la compra de casas, departamentos, oficinas, locales comerciales, etc. Tasa Fija durante todo el período, en UF o en pesos. Plazo del Crédito de 5 a 30 años. Período de gracia de hasta 6 meses. Posibilidad de elegir un mes de no pago de dividendo al año. Prepago: Puedes prepagar parte de la deuda con el fin de disminuir el dividendo, o acortar el plazo residual del Crédito. Hasta 90% de financiamiento. Mes sin pago: Uno por año. Seguros a contratar: Desgravamen, incendio y sismo.
+
+/* TASA VARIABLE */
++ [*] (credito|creditos) [*] (tasa variable|taza variable|tasa varia el|taza varia el) [*]
+- <call>dedito</call>Si lo que buscas es una tasa variable, que te permita acceder en el futuro a dividendos más bajos que el mercado, el Crédito Hipotecario Bci Tasa Variable es tu opción.  Para conocer sus características dime "Características Tasa Variable".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa variable|taza variable|tasa varia el|taza varia el) [*]
+- <call>dedito</call>Destinado para la compra, reparación y construcción de una vivienda. Fines Generales, compra de sitios, compra de oficinas y locales comerciales y libre disponibilidad. Fines generales, compra de sitios, compra de oficinas y locales comerciales, y libre disponibilidad. Plazo del Crédito de 5 a 30 años. Tasa Fija los primeros años, entre 1 y 5 años del Crédito, y posteriormente tasa variable, la cual se fija año a año en función de la Tasa Activa Bancaria. Período de gracia de hasta 6 meses. Hasta 90% de financiamiento. Seguros a contratar: Desgravamen, incendio y sismo.
+
+/* PAGA LA MITAD */
++ [*] (credito|creditos) [*] (paga la mitad|mitad|paga la mirad|mirad|paga la amistad|amistad) [*]
+- <call>dedito</call>El Crédito Hipotecario Bci Paga la Mitad ha sido diseñado para darte un apoyo adicional en la compra de tu nueva vivienda, ya que durante los dos primeros años podrás pagar sólo la mitad del dividendo, y a partir del tercer año, pagarás el dividendo definitivo. Para conocer sus características dime "Características Paga la Mitad".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (paga la mitad|mitad|paga la mirad|mirad|paga la amistad|amistad) [*]
+- <call>dedito</call> La parte del capital e interés que no pagues durante los primeros dos años se capitaliza y se paga en forma prorrateada durante el resto del plazo del préstamo. Tasa Fija todo el período en UF o en pesos. Financia hasta el 80% del valor total. Hasta 20 años de plazo para pago. Seguros a contratar: Desgravamen, incendio y sismo.
+
+/* TASA FIJA */
++ [*] (credito|creditos) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call>Si lo que necesitas es adquirir una vivienda o reprogramar tus deudas a través de una cuota fija que elijas para todo el período del crédito, el Crédito Hipotecario Bci Tasa Fija es tu opción. Para conocer sus características dime "Características Tasa Fija".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call> Destinado a la compra de casas, departamentos, oficinas, locales comerciales, etc. Tasa Fija durante todo el período, en UF o en pesos. Plazo del Crédito de 5 a 30 años. Período de gracia de hasta 6 meses. Posibilidad de elegir un mes de no pago de dividendo al año. Prepago: Puedes prepagar parte de la deuda con el fin de disminuir el dividendo, o acortar el plazo residual del Crédito. Hasta 90% de financiamiento. Mes sin pago: Uno por año. Seguros a contratar: Desgravamen, incendio y sismo.
+
+/* TASA FIJA */
++ [*] (credito|creditos) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call>Si lo que necesitas es adquirir una vivienda o reprogramar tus deudas a través de una cuota fija que elijas para todo el período del crédito, el Crédito Hipotecario Bci Tasa Fija es tu opción. Para conocer sus características dime "Características Tasa Fija".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa fija|taza fija) [*]
+- <call>dedito</call> Destinado a la compra de casas, departamentos, oficinas, locales comerciales, etc. Tasa Fija durante todo el período, en UF o en pesos. Plazo del Crédito de 5 a 30 años. Período de gracia de hasta 6 meses. Posibilidad de elegir un mes de no pago de dividendo al año. Prepago: Puedes prepagar parte de la deuda con el fin de disminuir el dividendo, o acortar el plazo residual del Crédito. Hasta 90% de financiamiento. Mes sin pago: Uno por año. Seguros a contratar: Desgravamen, incendio y sismo.
+

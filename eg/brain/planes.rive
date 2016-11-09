@@ -1,11 +1,11 @@
 ﻿/*PLANES*/
 
 /*Larga*/
-+ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) (sobre|sobre los|acerca|acerca de|de|saber|saber de|saber sobre|con|saber acerca de|solicitar|que|saber más|saber más sobre) (que planes|los planes|planes|sus planes|todas los planes|los planes|un planes|el plan|plan)
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) [*] (que planes|los planes|planes|sus planes|todas los planes|los planes|un planes|el plan|plan)
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
 /*Larga invertida*/
-+ [*] (que plan|cual plan|que planes|cuales planes|mi plan|tu plan|los planes|todos los planes|el plan|que plan|un plan) (tienes|tenes|puedo|puedes|quieres|quiero|queres|podes|me tienes| me tenes| me quieres|me quiero|me podes|me puedes|hay|tienen) (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
++ [*] (que plan|cual plan|que planes|cuales planes|mi plan|tu plan|los planes|todos los planes|el plan|que plan|un plan) [*] (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
 /*Corta*/
@@ -17,6 +17,7 @@
 
 + [*] (cuales) [*] (planes) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
 
 /* UNIVERSITARIO */
 
@@ -53,13 +54,13 @@
 
 /* PREMIER */
 
-+ [*] (planes|plan|el|los) (premio|premier|premiers) [*]
++ [*] (planes|plan|el|los) (premio|premier|premiers|premiere) [*]
 - <call>dedito</call> Encuentra solución a tus necesidades de crédito, inversión y protección, gracias a la atención especializada de un ejecutivo de cuentas, y una oferta de productos y servicios de excelencia. Dime "Requisitos Plan Premier" para conocerlos, o pregúntame "¿Qué incluye el Plan Premier?" para saber que viene incluído en el plan.
 
-+ [*] requisitos [*] (planes|plan|el|los) [*] (premio|premier|premiers) [*]
++ [*] requisitos [*] (planes|plan|el|los) [*] (premio|premier|premiers|premiere) [*]
 - <call>dedito</call>  Renta Líquida entre 1.300.000 y 3.000.000 de pesos.
 
-+ [*] (incluye|viene con|trae) [*] (planes|plan|el|los) [*] (premio|premier|premiers) [*]
++ [*] (incluye|viene con|trae) [*] (planes|plan|el|los) [*] (premio|premier|premiers|premiere) [*]
 - <call>dedito</call> Cuenta Corriente en Moneda Nacional. Línea de sobregiro. Tarjeta de débito. Una ó Dos tarjetas de crédito, aplican Visa OpenSky, Visa Platinum y MasterCard Platinum.
 
 /* PREFERENCIAL */

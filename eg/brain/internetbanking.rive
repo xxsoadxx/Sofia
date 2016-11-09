@@ -133,13 +133,34 @@
 * <star1> == joaquin =>Contacto Joaquín encontrado. Di monto seguido del importe en pesos.
 - El contacto no existe. Para crear di contacto crear.
 
-+ (monto|el monto es) #
++ (monto|el monto es) *
 % contacto joaquin encontrado. di monto seguido del importe en pesos.
-- Para confirmar la transferencia a Joaquín por el monto de <star2> pesos di enviar a Joaquín
+- <call>loadmonto <star2></call>
 
-+ enviar a joaquin
-% para confirmar la transferencia a joaquin por el monto de * di enviar a joaquin
-- Transferencia realizada. Te he enviado un comprobante a tu correo.
+> object loadmonto javascript
+        console.log("args[0]"+args[0]);
+        var res = args[0].replace("$",""); 
+        args[0] = parseInt(res);
+        rs.setUservar('soandso', 'montotransferir', res);
+        return 'Para confirmar la transferencia a Joaquín por el monto de '+ args[0] +' pesos di Envíar a Joaquín';
+
+< object
+
+> object enviar javascript
+     
+        var monto = rs.getUservar('soandso', 'montotransferir');
+        if(monto !== 0 && monto !== 'undefined'){
+            return "Transferencia realizada. Te he enviado un comprobante a tu correo.";
+        }else{
+            return "No has ingresado el monto a transferir.";
+        }
+        
+
+< object
+
++ enviar a *
+* <star1> == joaquin => <call>enviar</call>
+- El contacto no existe.
 
 + [*] (pendiente|falta|debo|deberia) [*] (pago|pagar|factura) [*]
 * <get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
@@ -159,6 +180,12 @@
 - <call>tweet</call>
 
 + [*] banco [*] (twittear|twitter|tweet)
+- <call>tweet</call>
+
++ [*] banco [*] (comentario|comenta|comento)
+- <call>tweet</call>
+
++ [*] (comentario|comenta|comento) [*] banco [*]
 - <call>tweet</call>
 
 + [*] (cine|pelicula|peli) [*]
@@ -184,4 +211,89 @@
 
 + [*] recarga celular [*]
 - ¡No te quedes sin minutos! Recarga tu teléfono prepago de cualquier compañía en Bci.cl.
+
++ [*] (repetis|repites|repetime|repetir|repiteme|repite) [*]
+- <reply>
+
++ [*] (repetis|repites|repetime|repetir|repiteme|que|repite) [*] dije [*]
+- <input>
+
++ [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*] (plan|planes)
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*] (plan|planes) [*]
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (plan|planes) [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*]
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (plan|planes) [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*]
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ (solicitud de plan|solicitar plan)
+- Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
+
++ mi edad es # años
+- <set age=<star>> Continúa indicando cuál es tu renta mensual líquida en pesos diciendo "Mi renta mensual es " seguido del monto en pesos.
+
++ mi renta mensual es *
+- <call>getplan <star></call>
+
++ solicitar plan universitario
+- He transferido tus datos a la central, te contactaremos a la brevedad.
+
++ solicitar plan clasico
+- He transferido tus datos a la central, te contactaremos a la brevedad.
+
++ solicitar plan (premier|premiere)
+- He transferido tus datos a la central, te contactaremos a la brevedad.
+
++ solicitar plan preferencial
+- He transferido tus datos a la central, te contactaremos a la brevedad.
+
++ solicitar plan (advantage|advantaje|advantek|aadvantage)
+- He transferido tus datos a la central, te contactaremos a la brevedad.
+
+
+> object getplan javascript
+        console.log("args[0]"+args[0]);
+        var res = args[0].replace("$",""); 
+        args[0] = parseInt(res);
+        if(args[0] < 399999){
+            showreply('El plan que te recomiendo es el Plan Bci Universitario que incluye Cuenta corriente con tarjeta de débito, Línea de Sobregiro y Tarjeta de Crédito Gold. Para saber los requisitos di "Requisitos de Plan Bci Universitario" . Para solicitar el Plan Bci Universitario di "Solicitar Plan Universitario"');
+        }
+        if(args[0] < 749999 && args[0] >= 400000){
+            showreply('El plan que te recomiendo es el Plan Clásico que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Clásico". Para solicitar el Plan di "Solicitar Plan Clásico"');
+        
+        }
+        if(args[0] < 1299999 && args[0] >= 750000){
+            showreply('El plan que te recomiendo es el Plan Bci AAdvantage que incluye Cuenta corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito Bci / AAdvantage. Para saber los requisitos di "Requisitos de Plan AAdvantage". Para solicitar el Plan di "Solicitar Plan AAdvantage"');
+        }
+        if(args[0] < 2499999 && args[0] >= 1300000){
+            showreply('El plan que te recomiendo es el Plan Bci Premier que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Premier". Para solicitar el Plan di "Solicitar Plan Premier"');
+        }
+        if(args[0] < 2999999 && args[0] > 2500000){
+            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Preferencial". Para solicitar el Plan di "Solicitar Plan Preferencial"');
+        }
+        if(args[0] >= 3000000){
+            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Preferencial". Para solicitar el Plan di "Solicitar Plan Preferencial"');
+        }
+
+  
+   
+< object
+
+
+> topic sorry
+
+  // This will match if the word "sorry" exists ANYWHERE in their message
+  + [*] (perdon|perdoname|amo|quiero|disculpame) [*]
+  - Está bien te perdono {topic=random}
+
+  + *
+  - No, hasta que te disculpes.
+  - Di que lo sientes por insultarme!
+  - Discúlpate!
+
+< topic
 

@@ -1,5 +1,6 @@
 // Tell the user stuff about ourself.
 ! sub música = musica
+! sub comentó = comento
 
 + *
 - <call>noentiendo</call> No te he entendido
