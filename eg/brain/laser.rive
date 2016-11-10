@@ -166,6 +166,10 @@
 ! sub perdóname = perdoname
 ! sub características = caracteristicas
 ! sub varía = varia
+! sub construccion = construccion
+! sub promoción = promocion
+! sub contribución = contribucion
+! sub ayúdame = ayudame
 
 
 /* SALUDOS - DESPEDIDAS */
@@ -175,7 +179,7 @@
 - <call>saludar</call> Decime
 - <call>saludar</call> Hola
 
-+ [*] (hola|holis|hi|wena) [sofia] [sofi] [*]
++ [*] (hola|holis|hi|wena) [sofia] [sofi] [sophie] [*]
 - <call>saludar</call> ¡Hola! Siempre es un placer hablar contigo, si esta es tu primera vez, dime ayuda.
 - <call>saludar</call> ¡Hola! ¿Cómo estás?
 - <call>saludar</call> ¡Hola! ¿En qué puedo serte útil?
@@ -226,16 +230,15 @@
 - <call>love</call> ¡Jajaja que verguenza!
 - <call>love</call> Me diseñaron para lucir adorable y amable, ¡Gracias por notarlo!
 
-
 /* AYUDA */
 
-+ [*] ayuda
++ [*] (ayuda|ayudame)[*]
 - <call>dedito</call> Soy capaz de explicarte todos los servicios que banco BCI tiene para ti, solo debes preguntarme por ellos. Pregúntame por planes, tarjetas, créditos, beneficios y más. Por ejemplo "información de tarjetas" o "solicitar crédito". Para obtener más ayuda, dime más ayuda.
 
 + mas ayuda
 - <call>dedito</call> Puedes preguntarme por un tema en específico. Por ejemplo: Ayuda con créditos, transferencias, planes, beneficios. También puedes solicitar información de estos diciendo información seguido del producto con el que necesitas ayuda. Para solicitar un producto, solo dime "solicitud de" seguido del producto y te guiaré durante todo el proceso.
 
-+ [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (prestamos|prestamo)
++ [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (credito|creditos|prestamo|prestamos)
 - <call>dedito</call> ¿Con qué tipo de préstamo necesitas ayuda?
 
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (transferencia|transferencias)
@@ -244,6 +247,16 @@
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (planes|plan)
 - <call>dedito</call> ¿Con qué tipo de plan necesitas ayuda?
 
+/*OTROS SERVICIOS*/
+
++ [*] (recarga|recargar) [*]
+- <call>dedito</call>Recarga tu teléfono prepago o con cuenta controlada de cualquier compañía a través de tu Banco en Línea con cargo a tu Cuenta Corriente. Para recargar tu móvil sigue los siguientes pasos: Ingresa a Bci.cl con tu rut y clave. Selecciona la pestaña Pagos y Servicios. Ingresa en el menú lateral en Servicios de Recarga y luego a Recarga Celular. Completa los datos solicitados y ¡Listo!
+
++ [*] (bip|vip|bi) [*]
+-<call>dedito</call>¡No pierdas más tiempo haciendo largas filas para cargar tu tarjeta Bip!. Para recargar tu tarjeta Bip! sigue los siguientes pasos: Ingresa a Bci.cl con tu rut y clave. Selecciona la pestaña Pagos y Servicios.En el menú lateral accede a Servicios de Recarga y luego a Recarga Tarjeta Bip!.Completa los datos del formulario y ¡Listo!. 
+
++ [*] (avance|adelanto|avanse) [*] (cuenta|cuentas|credito|creditos) [*]
+- <call>dedito</call> El Avance a Cuenta Corriente es muy fácil de realizar, sólo debes Ingresa tu RUT y clave de Internet en Bci.cl. Selecciona el menú Tarjetas de Crédito y luego Efectivo en cuotas.  Acepta la operación y el dinero estará disponible en tu Cuenta.  
 
 /*EASTER EGGS*/
 

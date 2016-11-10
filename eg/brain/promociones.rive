@@ -1,0 +1,20 @@
+﻿+[*] (promocion|promociones) [*]
+-<call>dedito</call>En este momento tenemos 4 promociones activas. Paga tus contribuciones en 3 ó 6 cuotas sin interés. Promoción Noches Visa. Descuentos Dolphin Mall Miami. Weekend MasterCard BCI. Pregúntame por uno de ellos y te contaré más.
+
++[*] (contribucion|contribuciones) [*] (cuantas|botas|cuota|cuotas)[*]
+-<call>dedito</call>Paga tus Contribuciones en 3 ó 6 cuotas sin interés hasta el 30 de Noviemebre de 2016 con tus Tarjetas de Crédito Bci en www.sii.cl o www.tesoreria.cl.
+
++[*] (cuantas|botas|cuota|cuotas) [*] (contribucion|contribuciones) [*]
+-<call>dedito</call>Paga tus Contribuciones en 3 ó 6 cuotas sin interés hasta el 30 de Noviemebre de 2016 con tus Tarjetas de Crédito Bci en www.sii.cl o www.tesoreria.cl.
+
++[*] (noches|noche) [*] (visa|ibiza) [*]
+-<call>dedito</call>Luego de las 18 horas goza de descuentos Visa pagando con Tarjetas BCI. Para conocer los descuentos dime "Descuentos Noches Visa".
+
++[*] (visa|ibiza) [*] (noches|noche) [*]
+-<call>dedito</call>Luego de las 18 horas goza de descuentos Visa pagando con Tarjetas BCI. Para conocer los descuentos dime "Descuentos Noches Visa".
+
++[*] (descuentos|descuento) [*] (noche|noches) [*] (visa|ibiza) [*]
+- <call>dedito</call>25% en Barrio Italia, 20% en Dockers, 20% en Van Heusen, 20% en Levi's.
+
++ [*] (dolphin mall) [*]
+- <call>dedito</call>Cuando viajas a Miami el lugar ideal para hacer tus compras es Dolphin Mall, porque ahora con tu tarjeta Visa podrás disfrutar de grandes descuentos y muchos beneficios. Todas las compras de 350 a 499 dólares con visa obtendrán vouchers para restaurantes del Mall. Por mas de 500 dólares obendrás productos electrónicos. Pasaporte de descuentos del Dolphin Mall con ofertas en 80 comercios. Visa Lounge con áreas de descanso, estaciones de recarga de celulares, áreas para equipaje y línea telefónica de beneficios.

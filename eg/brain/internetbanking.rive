@@ -233,7 +233,7 @@
 + (solicitud de plan|solicitar plan)
 - Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
 
-+ mi edad es # años
++ mi edad es # [años]
 - <set age=<star>> Continúa indicando cuál es tu renta mensual líquida en pesos diciendo "Mi renta mensual es " seguido del monto en pesos.
 
 + mi renta mensual es *

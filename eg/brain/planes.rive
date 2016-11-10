@@ -1,21 +1,42 @@
 ﻿/*PLANES*/
 
 /*Larga*/
-+ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) [*] (que planes|los planes|planes|sus planes|todas los planes|los planes|un planes|el plan|plan)
++ [*] (asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir) [*] (que planes|los planes|planes|sus planes|todas los planes|los planes|un planes|el plan|plan|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro)
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
 /*Larga invertida*/
-+ [*] (que plan|cual plan|que planes|cuales planes|mi plan|tu plan|los planes|todos los planes|el plan|que plan|un plan) [*] (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
++ [*] (que plan|cual plan|que planes|cuales planes|mi plan|tu plan|los planes|todos los planes|el plan|que plan|un plan|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro) [*] (para ofrecer|para ofrecerme|ofrecerme|para darme|darme|para aplicar|aplicar|para aplicarme|aplicarme|para darme|darme|para dar|dar|tener|pedir|acceder) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
 /*Corta*/
-+ [*] (que|cual|cuales) (plan|planes) (tienen|tenes|hay) [*]
++ [*] (que|cual|cuales) (plan|planes|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros) (tienen|tenes|hay) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
-+ [*] (donde) [*] (plan) [*]
++ [*] (donde) [*] (plan|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
-+ [*] (cuales) [*] (planes) [*]
++ [*] (cuales) [*] (planes|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro) [*]
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (abrir|abri|iniciar) [*] (planes|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro) [*] 
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (planes|cuentas corrientes|cuenta corriente|caja ahorro|caja ahorros|caja de ahorros|caja de ahorro) [*] (abrir|abri|iniciar) [*] 
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (servicios|beneficios|servicio|beneficio|ventajas|facilidades|facilidad) [*] (banco|planes|plan|bancos|cuentas|cuenta|banco|ofrecen|ofrecer|ofreciendo) [*]
+- Todos nuestros planes cuentan con los siguientes beneficios: Cuenta Corriente en Moneda Nacional, Tarjeta de Débito, Línea de Sobregiro, Tarjeta de Crédito, Acceso a Banca Móvil y Apps Bci, Acceso a Cajero Automático Bci Full, Solicitud de Crédito en línea, Pagos de Cuentas en línea, Avance de Tarjeta de Crédito a Cuenta Corriente, Uso Tarjeta Virtual, Recargas de Celular y Tarjeta Bip!, Banca Twitter, ¡Y muchos más!.      
+
++ [*] (novedades|novedad) [*] (banco|planes|plan|bancos|cuentas|cuenta|banco|ofrecen|ofrecer|ofreciendo) [*]
+-<call>dedito</call>En este momento tenemos 4 promociones activas. Paga tus contribuciones en 3 ó 6 cuotas sin interés. Promoción Noches Visa. Descuentos Dolphin Mall Miami. Weekend MasterCard BCI. Pregúntame por uno de ellos y te contaré más.
+
++ [*] (banco|planes|plan|bancos|cuentas|cuenta|banco|ofrecen|ofrecer|ofreciendo) [*] (servicios|beneficios|servicio|beneficio|ventajas|facilidades|facilidad) [*] 
+- Todos nuestros planes cuentan con los siguientes beneficios: Cuenta Corriente en Moneda Nacional, Tarjeta de Débito, Línea de Sobregiro, Tarjeta de Crédito, Acceso a Banca Móvil y Apps Bci, Acceso a Cajero Automático Bci Full, Solicitud de Crédito en línea, Pagos de Cuentas en línea, Avance de Tarjeta de Crédito a Cuenta Corriente, Uso Tarjeta Virtual, Recargas de Celular y Tarjeta Bip!, Banca Twitter, ¡Y muchos más!.      
+
++ [*] (cuenta|cuentas) [*] (banco|bancos) [*]
+- <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
+
++ [*] (banco|bancos) [*] (cuenta|cuentas) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
 

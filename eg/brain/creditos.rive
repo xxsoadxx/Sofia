@@ -14,8 +14,12 @@
 
 /* CREDITO DE CONSUMO */
 
-+ [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo) [*]
++ [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos|casa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*]
 - <call>dedito</call>Para financiar todos tus proyectos y planes, en Bci tenemos un Crédito que se ajusta a cada una de tus necesidades. Dime "Características Crédito de Consumo" para saber más o "Solicitud Crédito de Consumo" para solicitarlo.
+
++ [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos|casa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*] (credito|creditos)[*]
+- <call>dedito</call>Para financiar todos tus proyectos y planes, en Bci tenemos un Crédito que se ajusta a cada una de tus necesidades. Dime "Características Crédito de Consumo" para saber más o "Solicitud Crédito de Consumo" para solicitarlo.
+
 
 + [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo) [*]
 - <call>dedito</call>Con nuestros créditos de cnsumo tienes hasta 90 días para el pago de la primera cuota. Hasta 2 meses fijos libres de pago al año. Posterga hasta el valor equivalente a 4 cuotas al año con la Cuota Flexible hasta las 14 horas del mismo día del vencimiento. Curse con abono inmediato las 24 horas a través de Bci.cl, App Bci Móvil, cajeros automáticos Bci, para clientes con monto pre aprobado y datos actualizados. Solicítalo ahora diciendo "Solicitar Crédito de Consumo"
@@ -46,17 +50,18 @@
 + [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (paga la mitad|mitad|paga la mirad|mirad|paga la amistad|amistad) [*]
 - <call>dedito</call> La parte del capital e interés que no pagues durante los primeros dos años se capitaliza y se paga en forma prorrateada durante el resto del plazo del préstamo. Tasa Fija todo el período en UF o en pesos. Financia hasta el 80% del valor total. Hasta 20 años de plazo para pago. Seguros a contratar: Desgravamen, incendio y sismo.
 
-/* TASA FIJA */
-+ [*] (credito|creditos) [*] (tasa fija|taza fija) [*]
-- <call>dedito</call>Si lo que necesitas es adquirir una vivienda o reprogramar tus deudas a través de una cuota fija que elijas para todo el período del crédito, el Crédito Hipotecario Bci Tasa Fija es tu opción. Para conocer sus características dime "Características Tasa Fija".
+/* CONSTRUCCION */
++ [*] (credito|creditos) [*] (construccion|construcciones) [*]
+- <call>dedito</call>El Crédito Hipotecario Bci Construcción fue creado para apoyarte en la construcción de tu casa soñada, ya que financiamos tanto la compra del terreno, como el proyecto de construcción. Para conocer sus características dime "Características Construcción".
 
-+ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa fija|taza fija) [*]
-- <call>dedito</call> Destinado a la compra de casas, departamentos, oficinas, locales comerciales, etc. Tasa Fija durante todo el período, en UF o en pesos. Plazo del Crédito de 5 a 30 años. Período de gracia de hasta 6 meses. Posibilidad de elegir un mes de no pago de dividendo al año. Prepago: Puedes prepagar parte de la deuda con el fin de disminuir el dividendo, o acortar el plazo residual del Crédito. Hasta 90% de financiamiento. Mes sin pago: Uno por año. Seguros a contratar: Desgravamen, incendio y sismo.
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (construccion|construcciones) [*]
+- <call>dedito</call> Monto máximo del Crédito: hasta el 80% del valor total del proyecto. Monto mínimo del Crédito: UF 1.000. Valor mínimo de tasación del proyecto terminado 3.000 UF (Región Metropolitana) y UF 2.000 UF en regiones. Exclusivo para Cuenta Corrientistas Bci. Renta mínima de UF 100.Financiamiento de la compra del terreno. Financiamiento de la construcción.Créditos de enlace que se otorgan en la medida que avanza el proyecto de construcción. Puedes optar a solicitar estos créditos pagando intereses mensuales y el capital al final de la construcción o simplemente pagar ambos (capital e intereses) al final. Crédito hipotecario otorgado al final de la construcción, para cancelar todos los créditos de enlace otorgados y de financiamiento del terreno en caso de estar incluído.  
 
-/* TASA FIJA */
-+ [*] (credito|creditos) [*] (tasa fija|taza fija) [*]
-- <call>dedito</call>Si lo que necesitas es adquirir una vivienda o reprogramar tus deudas a través de una cuota fija que elijas para todo el período del crédito, el Crédito Hipotecario Bci Tasa Fija es tu opción. Para conocer sus características dime "Características Tasa Fija".
 
-+ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (tasa fija|taza fija) [*]
-- <call>dedito</call> Destinado a la compra de casas, departamentos, oficinas, locales comerciales, etc. Tasa Fija durante todo el período, en UF o en pesos. Plazo del Crédito de 5 a 30 años. Período de gracia de hasta 6 meses. Posibilidad de elegir un mes de no pago de dividendo al año. Prepago: Puedes prepagar parte de la deuda con el fin de disminuir el dividendo, o acortar el plazo residual del Crédito. Hasta 90% de financiamiento. Mes sin pago: Uno por año. Seguros a contratar: Desgravamen, incendio y sismo.
+/* UNIVERSAL */
++ [*] (credito|creditos) [*] (universal|universales) [*]
+- <call>dedito</call>El Crédito Hipotecario Bci Universal es un Crédito con diseño estandarizado, que te permite comparar fácilmente entre las distintas entidades financieras que ofrecen el mismo producto.  Para conocer sus características dime "Características Universal".
+
++ [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (universal|universales) [*]
+- <call>dedito</call> Tasa Fija en UF. Sólo disponible para personas naturales. Plazo desde 15 a 30 años. Montos: Entre 1.000 y 5.000 UF. Exclusivo para destino Vivienda: Ya sea adquirir, ampliar o reparar o refinanciar créditos hipotecarios existentes que tengan el mismo objetivo. Garantía: Primera hipoteca sobre el bien raíz a financiar. Sin meses de gracia.
 
