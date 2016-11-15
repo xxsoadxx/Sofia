@@ -1,16 +1,16 @@
 
 
-+ [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando) [*] saldo [*] cuenta [*]
-- <call>getsaldo</call>
++ [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|cual) [*] saldo [*] cuenta [*]
+- <call>dedito</call><call>getsaldo</call>
 
-+ [*] saldo [*] cuenta [*] (necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando)
-- <call>getsaldo</call>
++ [*] saldo [*] cuenta [*] (cual|necesitaria|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando)
+- <call>dedito</call><call>getsaldo</call>
 
-+ saldo [*] cuenta [*]
-- <call>getsaldo</call>
++ [*] saldo [*] cuenta [*]
+- <call>dedito</call><call>getsaldo</call>
 
-+ cuenta [*] saldo [*]
-- <call>getsaldo</call>
++ [*] cuenta [*] saldo [*]
+- <call>dedito</call><call>getsaldo</call>
 
 > object getsaldo javascript
     console.log("getcot ejecuto");
@@ -23,68 +23,68 @@
 
 
 + [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (dolar|dolares) [*]
-- <call>getdolar</call>
+- <call>dedito</call><call>getdolar</call>
 
 + [*] (dolar|dolares) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
-- <call>getdolar</call>
+- <call>dedito</call><call>getdolar</call>
 
 + [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (dolar|dolares) [*]
-- <call>getdolar</call>
+- <call>dedito</call><call>getdolar</call>
 
 + [*] (cotizacion|cotizando) [*] (dolar|dolares) [*]
-- <call>getdolar</call>
+- <call>dedito</call><call>getdolar</call>
 
 + [*] (dolar|dolares) [*] (cotizacion|cotizando) [*]
-- <call>getdolar</call>
+- <call>dedito</call><call>getdolar</call>
 
 > object getdolar javascript
-   
+
         showreply("La cotización del dólar es de " + USD + " pesos");
-   
+
 < object
 
 
 + [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (euro|euros) [*]
-- <call>geteuro</call>
+- <call>dedito</call><call>geteuro</call>
 
 + [*] (euro|euros) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
-- <call>geteuro</call>
+- <call>dedito</call><call>geteuro</call>
 
 + [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (euro|euros) [*]
-- <call>geteuro</call>
+- <call>dedito</call><call>geteuro</call>
 
-+ [*] cotizacion [*] (euros|euro) [*]
-- <call>geteuro</call>
++ [*] (cotizacion|valor) [*] (euros|euro) [*]
+- <call>dedito</call><call>geteuro</call>
 
-+ [*] (euro|euros) [*] cotizacion [*]
-- <call>geteuro</call>
++ [*] (euro|euros) [*] (cotizacion|valor) [*]
+- <call>dedito</call><call>geteuro</call>
 
 > object geteuro javascript
-   
-        showreply("La cotización del dólar es de " + EURO + " pesos");
-   
+
+        showreply("La cotización del euro es de " + EURO + " pesos");
+
 < object
 
 
-+ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (unidad de fomento|UF|unidad fomento) [*]
-- <call>getuf</call>
++ [*] (necesitaria|quisiera|dame|necesito|quiero|das|informas|brindas|proporcionas|pasame|pasas|informarme|pasarme|brindarme|proporcionarme|solicito|necesitar|exijo|demando|necesitaria) [*] (cotizando|cotizacion|cotizaria) [*] (unidad de fomento|u f|unidad fomento) [*]
+- <call>dedito</call><call>getuf</call>
 
-+ [*] (unidad de fomento|UF|unidad fomento) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
-- <call>getuf</call>
++ [*] (unidad de fomento|U F|unidad fomento) [*] (cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*]
+- <call>dedito</call><call>getuf</call>
 
-+ [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (unidad de fomento|UF|unidad fomento) [*]
-- <call>getuf</call>
++ [*] (como estaria|cuanto esta|cuanto estaria|cuanto vale|cuanto cotiza|cuanto se cotiza|como cotiza|cual es el valor) [*] (unidad de fomento|u f|unidad fomento) [*]
+- <call>dedito</call><call>getuf</call>
 
-+ [*] cotizacion [*] (unidad de fomento|UF|unidad fomento) [*]
-- <call>getuf</call>
++ [*] cotizacion [*] (unidad de fomento|u f|unidad fomento) [*]
+- <call>dedito</call><call>getuf</call>
 
-+ [*] (unidad de fomento|UF|unidad fomento) [*] cotizacion [*]
-- <call>getuf</call>
++ [*] (unidad de fomento|u f|unidad fomento) [*] cotizacion [*]
+- <call>dedito</call><call>getuf</call>
 
 > object getuf javascript
-   
+
         showreply("La cotización de la unidad de fomento es de " + UF + " pesos");
-   
+
 < object
 
 
@@ -99,30 +99,30 @@
             showreply("No posees una cuenta en el banco. Si deseas que inicie una solicitud tan solo dilo");
         }
 
-   
+
 < object
 
 
 + [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|sabes|cobro) [*] sueldo [*]
-- Si, te han depositado el sueldo hoy a las 11 am.
+- <call>dedito</call>Si, te han depositado el sueldo hoy a las 11 am.
 
 + [*] sueldo [*] (cobre|acreditaron|depositaron|enviaron|deposito|acredito|envio|recibi|pagaron|pago|cobro) [*]
-- Si, te han depositado el sueldo hoy a las 11 am.
+- <call>dedito</call>Si, te han depositado el sueldo hoy a las 11 am.
 
 + [*] (sucursal|oficina) [*] (cerca|cercana|proxima|ir|banco) [*]
-- Te he enviado un correo con la ruta hacia la sucursal más cercana.
+- <call>dedito</call>Te he enviado un correo con la ruta hacia la sucursal más cercana.
 
 + [*] (cerca|cercana|proxima|ir|banco) [*] (sucursal|oficina|) [*]
-- Te he enviado un correo con la ruta hacia la sucursal más cercana.
+- <call>dedito</call>Te he enviado un correo con la ruta hacia la sucursal más cercana.
 
 + [*] (beneficio|beneficios) [*] (tarjeta|tarjetas) [*]
-- Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
+- <call>dedito</call>Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
 
-+ [*] (tarjeta|tarjetas) [*] (beneficio|beneficios) [*] 
-- Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
++ [*] (tarjeta|tarjetas) [*] (beneficio|beneficios) [*]
+- <call>dedito</call>Pagando con las Tarjetas de Crédito Bci, accede en forma inmediata a descuentos en más de 1000 comercios a lo largo de todo Chile
 
 + [*] (descuento|descuentos|ofertas|barato|compras|shopping) [*]
-- Con las Tarjetas de Crédito Bci tienes descuentos en lugares como Patuelli 15%, Cineplanet 45%. Te he enviado todos los sitios con descuentos a tu correo.
+-<call>dedito</call> Con las Tarjetas de Crédito Bci tienes descuentos en lugares como Patuelli 15%, Cineplanet 45%. Te he enviado todos los sitios con descuentos a tu correo.
 
 + (cuanto llevo gastado en|cuanto voy gastando en|gastos en|que gaste en|total de debitos en|cuanto he gastado|cuanto tengo gastado en|dame cuanto voy gastando en|decime cuanto voy gastando en) *
 * <star2> == uber =>Llevas gastado 11700 pesos en <star2>
@@ -139,22 +139,25 @@
 
 > object loadmonto javascript
         console.log("args[0]"+args[0]);
-        var res = args[0].replace("$",""); 
+        var res = args[0].replace("$","");
         args[0] = parseInt(res);
         rs.setUservar('soandso', 'montotransferir', res);
-        return 'Para confirmar la transferencia a Joaquín por el monto de '+ args[0] +' pesos di Envíar a Joaquín';
+         $('.pad').show();
+         operation = "transfer";
+		return 'Para confirmar la transferencia a Joaquín por el monto de '+ args[0] +' pesos Ingresa tu pin';
+		
 
 < object
 
 > object enviar javascript
-     
+
         var monto = rs.getUservar('soandso', 'montotransferir');
         if(monto !== 0 && monto !== 'undefined'){
             return "Transferencia realizada. Te he enviado un comprobante a tu correo.";
         }else{
             return "No has ingresado el monto a transferir.";
         }
-        
+
 
 < object
 
@@ -163,15 +166,15 @@
 - El contacto no existe.
 
 + [*] (pendiente|falta|debo|deberia) [*] (pago|pagar|factura) [*]
-* <get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
-- No tienes facturas pendientes.
+* <call>dedito</call><get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
+- <call>dedito</call>No tienes facturas pendientes.
 
 + [*] (pago|pagar|factura) [*] (pendiente|falta|debo|deberia) [*]
-* <get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
-- No tienes facturas pendientes.
+* <call>dedito</call><get pendiente> == undefined =>Tienes una factura telefónica pendiente de Claro, por 14990 pesos. Para pagar di "pagar factura Claro"
+- <call>dedito</call>No tienes facturas pendientes.
 
 + pagar factura *
-- <call>pagarfactura <star1></call>
+- <call>dedito</call><call>pagarfactura <star1></call>
 
 + confirmaciondeteclado
 - <call>teclado</call>
@@ -189,34 +192,34 @@
 - <call>tweet</call>
 
 + [*] (cine|pelicula|peli) [*]
-- Con las tarjetas de Bci tienes 45% de descuento en Cineplanet
+- <call>gota</call>Con las tarjetas de Bci tienes 45% de descuento en Cineplanet. Tienes un cine cerca en Costanera Center.
 
 + [*] (comida|hambre|comer) [*]
-- Con las tarjetas de Bci tienes 15% de descuento en el Restaurante Don Toro
+- <call>gota</call>Con las tarjetas de Bci tienes 15% de descuento en el Restaurante Don Toro
 
 + [*] servicios [*] (ofrecen|disponen|tienen|otorgan|brindan|tiene|ofrece|otorga|brinda) [*]
-- En Bci encontrarás una amplia gama de productos y servicios, pensados para resolver todas tus necesidades financieras. Como Pago de Cuentas, Avances a Cuentas, Tarjeta Virtual, Recarga Bip, Recarga Celular, y mucho más. Si deseas saber más información de un servicio di el nombre de un servicio. 
+- En Bci encontrarás una amplia gama de productos y servicios, pensados para resolver todas tus necesidades financieras. Como Pago de Cuentas, Avances a Cuentas, Tarjeta Virtual, Recarga Bip, Recarga Celular, y mucho más. Si deseas saber más información de un servicio di el nombre de un servicio.
 
 + [*] pago de cuentas [*]
-- Paga todas tus cuentas servicios a través de Bci.cl con cargo a tu Cuenta Corriente.
+- <call>dedito</call>Paga todas tus cuentas servicios a través de Bci.cl con cargo a tu Cuenta Corriente.
 
 + [*] avances a cuentas [*]
-- Traspasa dinero desde tu Tarjeta de Crédito Bci hacia tu Cuenta Corriente en un par de clics.
+- <call>dedito</call>Traspasa dinero desde tu Tarjeta de Crédito Bci hacia tu Cuenta Corriente en un par de clics.
 
 + [*] tarjeta virtual [*]
-- ¿Quieres comprar por Internet de la forma más segura? Genera tu Tarjeta Virtual en Bci.cl.
+- <call>dedito</call>¿Quieres comprar por Internet de la forma más segura? Genera tu Tarjeta Virtual en Bci.cl.
 
 + [*] recarga bip [*]
-¡Nunca pierdas un viaje! Recarga tu Tarjeta Bip! en Bci.cl las 24 horas del día.
+<call>dedito</call>¡Nunca pierdas un viaje! Recarga tu Tarjeta Bip! en Bci.cl las 24 horas del día.
 
 + [*] recarga celular [*]
-- ¡No te quedes sin minutos! Recarga tu teléfono prepago de cualquier compañía en Bci.cl.
+- <call>dedito</call>¡No te quedes sin minutos! Recarga tu teléfono prepago de cualquier compañía en Bci.cl.
 
 + [*] (repetis|repites|repetime|repetir|repiteme|repite) [*]
-- <reply>
+- <call>gota</call><reply>
 
 + [*] (repetis|repites|repetime|repetir|repiteme|que|repite) [*] dije [*]
-- <input>
+- <call>gota</call><input>
 
 + [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*] (plan|planes)
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
@@ -230,70 +233,130 @@
 + [*] (plan|planes) [*] (asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|quiero|decir) [*] (sobre|acerca|de|saber|con|solicitar|tramitar|solicitud) [*]
 - <call>dedito</call> Contamos con varios planes que se adaptan a diferentes necesidades. Universitario, Independiente, Clásico, Premier, Preferencial, OpenSky y AAdvantage. Para saber más sobre un plan solo menciónamelo. Por ejemplo "Plan Premier". Para solicitar un plan dime "Solicitud de plan".
 
++ [*] (saber|informarme) [*] (plan|planes) [*]
+- <call>dedito</call>Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
+
++ [*] (saber|informarme|conviene) [*] (plan|planes) [*]
+- <call>dedito</call>Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
+
++ [*] (plan|planes) [*] (saber|informarme|conviene) [*] 
+- <call>dedito</call>Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
+
 + (solicitud de plan|solicitar plan)
-- Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
+- <call>dedito</call>Puedo obtener el plan perfecto para ti, ingresando tus datos. Di "Mi edad es " seguido de tu edad en años.
 
 + mi edad es # [años]
-- <set age=<star>> Continúa indicando cuál es tu renta mensual líquida en pesos diciendo "Mi renta mensual es " seguido del monto en pesos.
+- <call>dedito</call><set age=<star>> Continúa indicando cuál es tu renta mensual líquida en pesos diciendo "Mi renta mensual es " seguido del monto en pesos.
 
 + mi renta mensual es *
-- <call>getplan <star></call>
+- <call>dedito</call><call>getplan <star></call>
 
 + solicitar plan universitario
-- He transferido tus datos a la central, te contactaremos a la brevedad.
+- <call>love</call>He transferido tus datos a la central, te contactaremos a la brevedad.
 
 + solicitar plan clasico
-- He transferido tus datos a la central, te contactaremos a la brevedad.
+- <call>love</call>He transferido tus datos a la central, te contactaremos a la brevedad.
 
 + solicitar plan (premier|premiere)
-- He transferido tus datos a la central, te contactaremos a la brevedad.
+- <call>love</call>He transferido tus datos a la central, te contactaremos a la brevedad.
 
 + solicitar plan preferencial
-- He transferido tus datos a la central, te contactaremos a la brevedad.
+- <call>love</call>He transferido tus datos a la central, te contactaremos a la brevedad.
 
 + solicitar plan (advantage|advantaje|advantek|aadvantage)
-- He transferido tus datos a la central, te contactaremos a la brevedad.
+- <call>love</call>He transferido tus datos a la central, te contactaremos a la brevedad.
 
 
 > object getplan javascript
         console.log("args[0]"+args[0]);
-        var res = args[0].replace("$",""); 
+        var res = args[0].replace("$","");
         args[0] = parseInt(res);
         if(args[0] < 399999){
-            showreply('El plan que te recomiendo es el Plan Bci Universitario que incluye Cuenta corriente con tarjeta de débito, Línea de Sobregiro y Tarjeta de Crédito Gold. Para saber los requisitos di "Requisitos de Plan Bci Universitario" . Para solicitar el Plan Bci Universitario di "Solicitar Plan Universitario"');
+            showreply('El plan que te recomiendo es el Plan Bci Universitario que incluye Cuenta corriente con tarjeta de débito, Línea de Sobregiro y Tarjeta de Crédito Gold. Para solicitar el Plan Bci Universitario di "Solicitar Plan Universitario"');
         }
         if(args[0] < 749999 && args[0] >= 400000){
-            showreply('El plan que te recomiendo es el Plan Clásico que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Clásico". Para solicitar el Plan di "Solicitar Plan Clásico"');
-        
+            showreply('El plan que te recomiendo es el Plan Clásico que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para solicitar el Plan di "Solicitar Plan Clásico"');
+
         }
         if(args[0] < 1299999 && args[0] >= 750000){
-            showreply('El plan que te recomiendo es el Plan Bci AAdvantage que incluye Cuenta corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito Bci / AAdvantage. Para saber los requisitos di "Requisitos de Plan AAdvantage". Para solicitar el Plan di "Solicitar Plan AAdvantage"');
+            showreply('El plan que te recomiendo es el Plan Bci AAdvantage que incluye Cuenta corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito Bci / AAdvantage. Para solicitar el Plan di "Solicitar Plan AAdvantage"');
         }
         if(args[0] < 2499999 && args[0] >= 1300000){
-            showreply('El plan que te recomiendo es el Plan Bci Premier que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Premier". Para solicitar el Plan di "Solicitar Plan Premier"');
+            showreply('El plan que te recomiendo es el Plan Bci Premier que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para solicitar el Plan di "Solicitar Plan Premier"');
         }
         if(args[0] < 2999999 && args[0] > 2500000){
-            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Preferencial". Para solicitar el Plan di "Solicitar Plan Preferencial"');
+            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para solicitar el Plan di "Solicitar Plan Preferencial"');
         }
         if(args[0] >= 3000000){
-            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para saber los requisitos di "Requisitos de Plan Preferencial". Para solicitar el Plan di "Solicitar Plan Preferencial"');
+            showreply('El plan que te recomiendo es el Plan Bci Preferencial que incluye Cuenta Corriente, Línea de Sobregiro, Tarjeta de Débito y Tarjeta de Crédito. Para solicitar el Plan di "Solicitar Plan Preferencial"');
         }
 
-  
-   
+
+
 < object
+
 
 
 > topic sorry
 
   // This will match if the word "sorry" exists ANYWHERE in their message
   + [*] (perdon|perdoname|amo|quiero|disculpame) [*]
-  - Está bien te perdono {topic=random}
+  - <call>love</call>Está bien te perdono {topic=random}
 
   + *
-  - No, hasta que te disculpes.
-  - Di que lo sientes por insultarme!
-  - Discúlpate!
+  - <call>love</call>No, hasta que te disculpes.
+  - <call>love</call>Di que lo sientes por insultarme!
+  - <call>love</call>Discúlpate!
 
 < topic
 
++ day #
+- <call>setday <star1></call>
+
+> object setday javascript
+    console.log("set day	" +  args[0]);
+    localStorage.day = args[0];
+	return "OK"
+< object
+
++ [*] solicitud [*] retomar [*]
+- <call>dedito</call>Falta responder si quieres un mes de no pago? di mes de no pago seguido del mes
+
++ [*] retomar [*] solicitud [*]
+- <call>dedito</call>Falta responder si quieres un mes de no pago? di mes de no pago seguido del mes
+
++ [*] (que) [*] mes [*] no [*] pago [*]
+- <call>gota</call>Es un mes que eliges al año en el cual no se te cobra la cuota, para ser pagada posteriormente.
+
++ [*] retomar [*] solicitud [*]
+- <call>dedito</call>¿Quieres un mes de no pago? di mes de no pago seguido del mes
+
++ (mes|memes|messi) de no pago *
+- <call>love</call>Listo, he enviado la solicitud. También envié a tu correo la lista de documentos que debes enviar a creditos@bci.cl
+
++ [*] (estado|estados|paso|situacion|encuentra) [*] credito [*]
+- <call>dedito</call> <call>evalcred</call> 
+
+> object evalcred javascript
+	if(evalcred == 0){
+		evalcred = 1;
+		setTimeout(function(){
+				showreply("Te tengo buenas noticias! El crédito ha sido aprobado. El monto ha sido depositado en tu cuenta.");
+				var msg = new SpeechSynthesisUtterance();
+
+				msg.voice = voices[6]; // Note: some voices don't support altering params
+				msg.voiceURI = 'native';
+				msg.volume = 1; // 0 to 1
+				/*msg.rate = 1; // 0.1 to 10
+				msg.pitch = 1; //0 to 2*/
+				msg.text = "Te tengo buenas noticias! El crédito ha sido aprobado. El monto ha sido depositado en tu cuenta.";
+				msg.lang = 'es-UY';
+
+
+				speechSynthesis.speak(msg);
+		}, 10000);
+		return "El crédito se encuentra en evaluación."
+	}else{
+		return "Te tengo buenas noticias! El crédito ha sido aprobado."
+	}
+< object

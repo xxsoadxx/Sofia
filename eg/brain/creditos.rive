@@ -14,10 +14,10 @@
 
 /* CREDITO DE CONSUMO */
 
-+ [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos|casa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*]
++ [*] (credito|creditos) [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos|coche|coches|casa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*]
 - <call>dedito</call>Para financiar todos tus proyectos y planes, en Bci tenemos un Crédito que se ajusta a cada una de tus necesidades. Dime "Características Crédito de Consumo" para saber más o "Solicitud Crédito de Consumo" para solicitarlo.
 
-+ [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos|casa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*] (credito|creditos)[*]
++ [*] (de consumo|consumo|con suma|con sumo|automotor|hipotecario|automovil|auto|viajes|viaje|autos||coche|cochescasa|hogar|hogares|casas|estudio|estudios|cuenta|cuentas) [*] (credito|creditos)[*]
 - <call>dedito</call>Para financiar todos tus proyectos y planes, en Bci tenemos un Crédito que se ajusta a cada una de tus necesidades. Dime "Características Crédito de Consumo" para saber más o "Solicitud Crédito de Consumo" para solicitarlo.
 
 
@@ -55,7 +55,7 @@
 - <call>dedito</call>El Crédito Hipotecario Bci Construcción fue creado para apoyarte en la construcción de tu casa soñada, ya que financiamos tanto la compra del terreno, como el proyecto de construcción. Para conocer sus características dime "Características Construcción".
 
 + [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (construccion|construcciones) [*]
-- <call>dedito</call> Monto máximo del Crédito: hasta el 80% del valor total del proyecto. Monto mínimo del Crédito: UF 1.000. Valor mínimo de tasación del proyecto terminado 3.000 UF (Región Metropolitana) y UF 2.000 UF en regiones. Exclusivo para Cuenta Corrientistas Bci. Renta mínima de UF 100.Financiamiento de la compra del terreno. Financiamiento de la construcción.Créditos de enlace que se otorgan en la medida que avanza el proyecto de construcción. Puedes optar a solicitar estos créditos pagando intereses mensuales y el capital al final de la construcción o simplemente pagar ambos (capital e intereses) al final. Crédito hipotecario otorgado al final de la construcción, para cancelar todos los créditos de enlace otorgados y de financiamiento del terreno en caso de estar incluído.  
+- <call>dedito</call> Monto máximo del Crédito: hasta el 80% del valor total del proyecto. Monto mínimo del Crédito: UF 1.000. Valor mínimo de tasación del proyecto terminado 3.000 UF (Región Metropolitana) y UF 2.000 UF en regiones. Exclusivo para Cuenta Corrientistas Bci. Renta mínima de UF 100.Financiamiento de la compra del terreno. Financiamiento de la construcción.Créditos de enlace que se otorgan en la medida que avanza el proyecto de construcción. Puedes optar a solicitar estos créditos pagando intereses mensuales y el capital al final de la construcción o simplemente pagar ambos (capital e intereses) al final. Crédito hipotecario otorgado al final de la construcción, para cancelar todos los créditos de enlace otorgados y de financiamiento del terreno en caso de estar incluído.
 
 
 /* UNIVERSAL */
@@ -64,4 +64,3 @@
 
 + [*] (caracteristicas|caracteristica|cara asterisca|cara asteriscas) [*] (universal|universales) [*]
 - <call>dedito</call> Tasa Fija en UF. Sólo disponible para personas naturales. Plazo desde 15 a 30 años. Montos: Entre 1.000 y 5.000 UF. Exclusivo para destino Vivienda: Ya sea adquirir, ampliar o reparar o refinanciar créditos hipotecarios existentes que tengan el mismo objetivo. Garantía: Primera hipoteca sobre el bien raíz a financiar. Sin meses de gracia.
-

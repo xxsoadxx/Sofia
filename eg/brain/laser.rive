@@ -1,4 +1,4 @@
-﻿! sub él = el   
+﻿! sub él = el
 ! sub dé = de
 ! sub más = mas
 ! sub mí = mi
@@ -7,6 +7,7 @@
 ! sub té = te
 ! sub tú = tu
 ! sub ó = o
+! sub cobré = cobre
 ! sub aún = aun
 ! sub sólo = solo
 ! sub qué = que
@@ -94,7 +95,7 @@
 ! sub fósforo = fosforo
 ! sub cáscara = cascara
 ! sub cerámica = ceramica
-! sub oxígeno = oxigeno 
+! sub oxígeno = oxigeno
 ! sub didáctico = didactico
 ! sub válido = valido
 ! sub sillón = sillon
@@ -102,7 +103,7 @@
 ! sub país = pais
 ! sub préstamo = prestamo
 ! sub préstamos = prestamos
-! sub página = pagina 
+! sub página = pagina
 ! sub así = asi
 ! sub aquí = aqui
 ! sub infórmame = informame
@@ -119,6 +120,7 @@
 ! sub financiación = financiacion
 ! sub necesitaría = necesitaria
 ! sub ayúdame = ayudame
+! sub automóvil = automovil
 ! sub automóviles = automoviles
 ! sub mamá = mama
 ! sub crédito = credito
@@ -170,7 +172,10 @@
 ! sub promoción = promocion
 ! sub contribución = contribucion
 ! sub ayúdame = ayudame
+! sub situación = situacion
+! sub aplicación = aplicacion
 
+! array pedirinfo = asisteme|asistime|necesito|informacion|informame|informacion|informas|informa|cuentame|contame|cuentas|cuenta|dice|dime|decime|dices|explica|explicame|explicas|hablame|quiero|decir
 
 /* SALUDOS - DESPEDIDAS */
 
@@ -238,11 +243,14 @@
 + mas ayuda
 - <call>dedito</call> Puedes preguntarme por un tema en específico. Por ejemplo: Ayuda con créditos, transferencias, planes, beneficios. También puedes solicitar información de estos diciendo información seguido del producto con el que necesitas ayuda. Para solicitar un producto, solo dime "solicitud de" seguido del producto y te guiaré durante todo el proceso.
 
++ [*] (utilizo|uso|usa|utiliza|ocupa|funciona|funcionamiento|utilizar|usar) [*] [aplicacion|app|programa|sofia] [*]
+- Para hablarme, presiona y suelta el micrófono y háblame luego de la señal. Si hablo demasiado, puedes detenerme presionando sobre mi cabeza. Puedes pedirme que repita lo último que dije diciendo "Repite lo último que dije".
+
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (credito|creditos|prestamo|prestamos)
-- <call>dedito</call> ¿Con qué tipo de préstamo necesitas ayuda?
+- <call>dedito</call> Puedo informarte de los créditos disponibles en el banco, solo dime "Información de créditos".
 
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (transferencia|transferencias)
-- <call>dedito</call> ¿Con qué tipo de transferencia necesitas ayuda?
+- <call>dedito</call> ¿Quieres transferir? Dime "Quiero hacer una transferencia" para comenzar. También puedes hacer una transferencia rápida si tienes un contacto ya agregado. Por ejemplo "Contacto Joaquín transferir".
 
 + [*] (ayuda|ayudame|ayudes|asistencia|asistime) [*] (planes|plan)
 - <call>dedito</call> ¿Con qué tipo de plan necesitas ayuda?
@@ -253,30 +261,30 @@
 - <call>dedito</call>Recarga tu teléfono prepago o con cuenta controlada de cualquier compañía a través de tu Banco en Línea con cargo a tu Cuenta Corriente. Para recargar tu móvil sigue los siguientes pasos: Ingresa a Bci.cl con tu rut y clave. Selecciona la pestaña Pagos y Servicios. Ingresa en el menú lateral en Servicios de Recarga y luego a Recarga Celular. Completa los datos solicitados y ¡Listo!
 
 + [*] (bip|vip|bi) [*]
--<call>dedito</call>¡No pierdas más tiempo haciendo largas filas para cargar tu tarjeta Bip!. Para recargar tu tarjeta Bip! sigue los siguientes pasos: Ingresa a Bci.cl con tu rut y clave. Selecciona la pestaña Pagos y Servicios.En el menú lateral accede a Servicios de Recarga y luego a Recarga Tarjeta Bip!.Completa los datos del formulario y ¡Listo!. 
+-<call>dedito</call>¡No pierdas más tiempo haciendo largas filas para cargar tu tarjeta Bip!. Para recargar tu tarjeta Bip! sigue los siguientes pasos: Ingresa a Bci.cl con tu rut y clave. Selecciona la pestaña Pagos y Servicios.En el menú lateral accede a Servicios de Recarga y luego a Recarga Tarjeta Bip!.Completa los datos del formulario y ¡Listo!.
 
 + [*] (avance|adelanto|avanse) [*] (cuenta|cuentas|credito|creditos) [*]
-- <call>dedito</call> El Avance a Cuenta Corriente es muy fácil de realizar, sólo debes Ingresa tu RUT y clave de Internet en Bci.cl. Selecciona el menú Tarjetas de Crédito y luego Efectivo en cuotas.  Acepta la operación y el dinero estará disponible en tu Cuenta.  
+- <call>dedito</call> El Avance a Cuenta Corriente es muy fácil de realizar, sólo debes Ingresa tu RUT y clave de Internet en Bci.cl. Selecciona el menú Tarjetas de Crédito y luego Efectivo en cuotas.  Acepta la operación y el dinero estará disponible en tu Cuenta.
 
 /*EASTER EGGS*/
 
 + [*](chiste|chistes|broma|bromas)[*]
-- <call>risa</call> ¿Qué le dice una piedra a otra piedra?. La vida es dura. 
+- <call>risa</call> ¿Qué le dice una piedra a otra piedra?. La vida es dura.
 - <call>risa</call> Anda tu a saber le dijeron. Y se fue a la escuela.
-- <call>risa</call> ¿Por qué se suicidó el libro de matemáticas?. Porque tenía muchos problemas. 
-- <call>risa</call> ¿Para qué va una caja al gimnasio?. Para hacerse caja fuerte. 
-- <call>risa</call> ¿Qué hace una persona con un sobre de ketchup en la oreja? Escuchando salsa. 
-- <call>risa</call> Mamá, mamá, en el colegio me dicen champú. Tranquilo, Johnson. No más lágrimas. 
-- <call>risa</call> ¿Para qué necesita una araña la computadora?. ¡Pues para entrar en la red! 
-- <call>risa</call> ¿Qué pasa si tiras un pato al agua?. Nada.  
-- <call>risa</call> ¿Cuál es el colmo de un vidriero? - Que su negocio quiebre.  
-- <call>risa</call> ¿Cuál es el colmo de Aladino? - Tener mal genio.  
-- <call>risa</call> ¿Cuánta leche da una vaca en su vida? - Lo mismo que en bajada...  
-- <call>risa</call> Me sobra demasiado mes al final del sueldo.   
-- <call>risa</call> Yo no soy supersticiosa. Da mala suerte.    
-- <call>risa</call> ¿Qué es un telón?. Una tele de 50 pulgadas o más.  
-- <call>risa</call> ¿Qué hay peor que encontrarse un gusano en una manzana?. Encontrarse medio.   
-- <call>risa</call> Facebook es el regreso a la época de las cavernas. Todo el mundo se comunica escribiendo en los muros.  
+- <call>risa</call> ¿Por qué se suicidó el libro de matemáticas?. Porque tenía muchos problemas.
+- <call>risa</call> ¿Para qué va una caja al gimnasio?. Para hacerse caja fuerte.
+- <call>risa</call> ¿Qué hace una persona con un sobre de ketchup en la oreja? Escuchando salsa.
+- <call>risa</call> Mamá, mamá, en el colegio me dicen champú. Tranquilo, Johnson. No más lágrimas.
+- <call>risa</call> ¿Para qué necesita una araña la computadora?. ¡Pues para entrar en la red!
+- <call>risa</call> ¿Qué pasa si tiras un pato al agua?. Nada.
+- <call>risa</call> ¿Cuál es el colmo de un vidriero? - Que su negocio quiebre.
+- <call>risa</call> ¿Cuál es el colmo de Aladino? - Tener mal genio.
+- <call>risa</call> ¿Cuánta leche da una vaca en su vida? - Lo mismo que en bajada...
+- <call>risa</call> Me sobra demasiado mes al final del sueldo.
+- <call>risa</call> Yo no soy supersticiosa. Da mala suerte.
+- <call>risa</call> ¿Qué es un telón?. Una tele de 50 pulgadas o más.
+- <call>risa</call> ¿Qué hay peor que encontrarse un gusano en una manzana?. Encontrarse medio.
+- <call>risa</call> Facebook es el regreso a la época de las cavernas. Todo el mundo se comunica escribiendo en los muros.
 
 + [*] (te quiero|te amo| te adoro) [*]
 - <call>love</call> Y yo a ti
@@ -306,29 +314,7 @@
 - Siempre es un placer.
 
 + gracias [*]
-- Siempre es un placer.
+- <call>love</call>Siempre es un placer.
 
 + [*]sabes lo que me paso
 - disco al 100
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-

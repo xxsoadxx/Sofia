@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 <style>
- 
+
 
 	.container {
 		padding-left:0px;
@@ -28,7 +28,7 @@
 		height:calc(100vh - 755px);
 		padding-left:20px;
 		padding-right:20px;
-		
+
 
 	}
 	#chatbox::-webkit-scrollbar {
@@ -42,7 +42,7 @@
   max-width: 80%;
   position: relative;
   clear: both;
- 
+
   background: #FFF;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.15, rgba(255, 255, 255)), color-stop(1, rgba(255, 255, 255)));
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255) 15%, rgba(255, 255, 255) 100%);
@@ -51,12 +51,12 @@
   background-image: -o-linear-gradient(bottom, rgba(255, 255, 255) 15%, rgba(255, 255, 255) 100%);
   background-image: linear-gradient(bottom, rgba(255, 255, 255) 15%, rgba(255, 255, 255) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='rgba(255, 255, 255)', endColorstr='rgba(255, 255, 255)');
- 
+
   border: solid 1px #912288;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
- 
+
   -webkit-box-shadow: inset 0 8px 5px rgba(255,255,255), 0 1px 2px rgba(0,0,0,0.2);
   -moz-box-shadow: inset 0 8px 5px rgba(255,255,255), 0 1px 2px rgba(0,0,0,0.2);
   box-shadow: inset 0 8px 5px rgba(255,255,255), 0 1px 2px rgba(0,0,0,0.2);
@@ -96,7 +96,7 @@
   left: auto;
   right: -5px;
 }
- 
+
 .bubble p {
   font-size: 1.4em;
 }
@@ -162,8 +162,9 @@
 
 </head>
 <body style="background-image:url(fondo.jpg);background-repeat:no-repeat;background-size: cover;">
+<button type="button" class="btn btn-primary " style="font-size: 50px;border-color: rgba(0, 0, 0, 0);margin-bottom: 20px;background-color: rgba(145, 34, 137, 0);position: absolute;z-index: 9999;width: 200px;height: 200px;" id="truco" onclick="truco()" ></button>
 
-<div style="display: block;" class="suscribe-splash"> 
+<div style="display: none;" class="suscribe-splash">
     <div class="suscribe-title">
         <!--<img alt="image" style="width:123px;" src="img/logo_bkp.png"/>-->
         <h1 id="logtit" style="font-size:110px">Bienvenido!</h1>
@@ -172,7 +173,7 @@
         <h1 id="regtit" style="display:none;font-size:110px">Registro</h1>
         <p id="regtit2" style="display:none;font-size:50px">Completa los siguientes datos para comenzar.</p>
         <form data-inview-animation="fadeInUp" class="form-horizontal" name="form" id="subscribe_form" onsubmit="return false" style="width:100%">
-    
+
                <input type="text" style="color:#000;margin-bottom: 15px;height:100px;font-size:70px;text-align:center;" placeholder="ingrese su usuario" required="" class="form-control m-b m-t" name="email" id="user">
 			   <input type="password" style="color:#000;margin-bottom: 15px;height:100px;font-size:70px;text-align:center;" placeholder="ingrese su clave" required="" class="form-control m-b m-t" name="email" id="pwd">
                 <input type="text" style="color:#000;margin-bottom: 15px;display:none;height:100px;font-size:70px;text-align:center;" placeholder="Nombre" required="" class="form-control m-b m-t" name="email" id="nom">
@@ -183,11 +184,11 @@
                <button type="button" class="btn btn-primary " style="display:none;width:100%;font-size:50px;margin-bottom:20px;background-color: rgb(145, 34, 137);" id="volver" onclick="volve()">Volver</button>
                <button type="button" class="btn btn-primary " style="width:100%;font-size:50px;margin-bottom:20px;background-color: rgb(145, 34, 137);" id="subscribesubmit2" onclick="nuevo()" >¿No tiene cuenta? Click aqui</button>
 
-              
 
-          
+
+
         </form>
-    </div> 
+    </div>
 </div>
 
 <div class="pad" style="display:none;">
@@ -233,13 +234,13 @@
 
 <div class="header" id="header" style="background-color: rgb(145, 34, 137);color: #FFF;height: 655px;">
 <!--
- <img src="./normal.gif" style="width:130px;height:130px;position:absolute;border-radius:100px;margin-top:10px;margin-left:20px;" onclick=""/> 
+ <img src="./normal.gif" style="width:130px;height:130px;position:absolute;border-radius:100px;margin-top:10px;margin-left:20px;" onclick=""/>
  <p style="font-size:50px;margin-left:180px;padding-top:15px"> Sofía </p>
  <p style="font-size:30px;margin-left:180px;"> Conectado </p>
- <i style="font-size: 90px;position:absolute;top:30px;right:20px;color:#FFF;" class="fa fa-cogs" ></i> 
+ <i style="font-size: 90px;position:absolute;top:30px;right:20px;color:#FFF;" class="fa fa-cogs" ></i>
 -->
- <img id="normal" src="./normal.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;" onclick="cancel()"/> 
- <img id="saludo" src="./Hey.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick="cancel()"/> 
+ <img id="normal" src="./normal.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;" onclick="cancel()"/>
+ <img id="saludo" src="./Hey.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick="cancel()"/>
  <img id="what" src="./what.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick="cancel()"/>
 
   <img id="risa" src="./risa.gif" style="width: 100%;height: auto;position: relative;border-radius: 0px;margin-left: auto;margin-right: auto;display: block;padding-top: 0px;display:none;" onclick="cancel()"/>
@@ -250,8 +251,8 @@
 </div>
 <div class="container" id="chatbox">
 
- 
- 
+
+
 
 </div>
 <input type="text" size="40" style="position: absolute;bottom: 0px;width: 80%;height: 100px;font-size:40px;border-color: #912289;" name="message" id="message" autocomplete="off" disabled placeholder="Por favor espere... cargando...">
@@ -275,6 +276,8 @@ var facturas = [{"Plan Claro":14990}]
 var contactos = [{"Contacto":"Carlos","Cuenta":654848134136}]
 var movimientos = [{"Id":"Uber","Desc":"Viaje Uber","Importe":990,"tipo":"D"},{"Id":"Market","Desc":"Viaje Uber","Importe":990,"tipo":"D"}]
 var cuenta = 940000;
+var day = 0;
+var evalcred = 0;
 function closepad() {
    $('.pad').hide();
 
@@ -291,13 +294,17 @@ function retropad() {
 
 
 if(typeof(Storage) !== "undefined") {
+   if (localStorage.day) {
+		day = localStorage.day;
+	
+   }
    if (localStorage.user) {
        $('.suscribe-splash').hide();
        var user = localStorage.user;
         var ape = localStorage.ape;
         var ruc = localStorage.ruc;
         var mail = localStorage.mail;
-        
+
    } else {
        console.log("usuario vacio");
        $('.suscribe-splash').show();
@@ -305,14 +312,14 @@ if(typeof(Storage) !== "undefined") {
 } else {
 
 }
-
+console.log("day=" + day);
 var tipo = 'I';
 function ingreso(){
     if(tipo === 'I'){
         $( "#nom" ).val('null') ;
-        $( "#ape" ).val('null'); 
+        $( "#ape" ).val('null');
         $( "#ruc" ).val(10) ;
-        $( "#mail" ).val('mail@mail.com'); 
+        $( "#mail" ).val('mail@mail.com');
         if(typeof(Storage) !== "undefined") {
             var user = $( "#user" ).val() ;
             console.log("graba " + user);
@@ -323,7 +330,7 @@ function ingreso(){
     }
     if(tipo === 'E'){
         $( "#user" ).val('null') ;
-        $( "#pwd" ).val('null'); 
+        $( "#pwd" ).val('null');
         if(typeof(Storage) !== "undefined") {
             var user = $( "#nom" ).val() ;
             var ape = $( "#ape" ).val() ;
@@ -338,13 +345,13 @@ function ingreso(){
         console.log("undefined ");
         }
     }
-    
+
 
     var inpObj = document.getElementById("subscribe_form");
     if (inpObj.checkValidity() == true) {
         $('.suscribe-splash').hide();
     }
-	
+
 
 }
 function volve() {
@@ -394,7 +401,7 @@ $( "#message" ).keyup(function( event ) {
 })
 $( "#message" ).change(function() {
 	console.log("cambio")
-  
+
 
 });
 
@@ -408,15 +415,15 @@ GetVoices();
 function InitAnnyang(commands){
  if (annyang) {
     // Let's define our first command. First the text we expect, and then the function it should call
-   
+
     annyang.setLanguage('es-UY');
     // Add our commands to annyang
     annyang.addCommands(commands);
-    
+
     // Start listening. You can call this here, or attach this call to an event, button, etc.
-   
+
     }
-} 
+}
 
 
 function GetVoices(){
@@ -428,7 +435,7 @@ function GetVoices(){
                 console.log("Actualizo GetVoices");
                 voices = window.speechSynthesis.getVoices();
         };
-        
+
     }
 }
 
@@ -444,8 +451,10 @@ function sendAudio(e){
         prendido = 'N';
         $('#boton').css({"background-color":"#912289"});
     }
-	
+
 }
+
+
 
 var runCommand = function(command){
 	audiocommand = true;
@@ -461,7 +470,7 @@ var runCommand = function(command){
 
 var commands = {
 	'*command': runCommand,
-};    
+};
 InitAnnyang(commands);
 
 if (window.location.search.indexOf("debug=1") > -1) {
@@ -486,17 +495,18 @@ rs.loadFile([
 	"brain/myself.rive",
 	"brain/prueba.rive",
 	"brain/laser.rive",
-    "brain/internetbanking.rive",
+  "brain/internetbanking.rive",
 	"brain/tarjetas.rive",
 	"brain/beneficios.rive",
 	"brain/planes.rive",
-    "brain/creditos.rive",
-    "brain/promociones.rive"
+  "brain/creditos.rive",
+  "brain/promociones.rive",
+  "brain/caso1.rive"
 	], on_load_success, on_load_error);
 
 var operation =""
 
-// You can register objects that can then be called 
+// You can register objects that can then be called
 // using <call></call> syntax
 rs.setSubroutine('pagarfactura', function(rs, args){
 	// doing complex stuff here
@@ -513,22 +523,22 @@ rs.setSubroutine('pagarfactura', function(rs, args){
         }else{
              return "La Factura se encuentra paga"
         }
-        
+
     }else{
         return "Factura no encontrada"
     }
 });
 
-   
+
 rs.setSubroutine('tweet', function(rs, args){
 	 var html = document.getElementById('twitter-widget-0').contentWindow.document.body.innerHTML;
-     
-   
+
+
     var elemento = $(html).find(".timeline-Tweet-text:first").text();
     console.log(elemento);
     elemento = elemento.replace("#","hashtag ");
     showreply(elemento);
- 
+
 });
 
 rs.setSubroutine('teclado', function(rs, args){
@@ -539,10 +549,10 @@ rs.setSubroutine('teclado', function(rs, args){
             rs.setUservar('soandso', 'pendiente', 'nada');
             cuenta = cuenta - 14990;
 
-	
+
 			showreply("Pago realizado con exito");
             var msg = new SpeechSynthesisUtterance();
-		
+
 			msg.voice = voices[6]; // Note: some voices don't support altering params
 			msg.voiceURI = 'native';
 			msg.volume = 1; // 0 to 1
@@ -554,11 +564,30 @@ rs.setSubroutine('teclado', function(rs, args){
 
 			speechSynthesis.speak(msg);
         }
+		if(operation === "transfer"){
+            rs.setUservar('soandso', 'pendiente', 'nada');
+            cuenta = cuenta - 4500;
+
+
+			showreply("Transferencia realizado con exito");
+            var msg = new SpeechSynthesisUtterance();
+
+			msg.voice = voices[6]; // Note: some voices don't support altering params
+			msg.voiceURI = 'native';
+			msg.volume = 1; // 0 to 1
+			/*msg.rate = 1; // 0.1 to 10
+			msg.pitch = 1; //0 to 2*/
+			msg.text = "Transferencia realizado con exito";
+			msg.lang = 'es-UY';
+
+
+			speechSynthesis.speak(msg);
+        }
     }else{
             pin = "";
             showreply("Pin incorrecto");
             var msg = new SpeechSynthesisUtterance();
-		
+
 			msg.voice = voices[6]; // Note: some voices don't support altering params
 			msg.voiceURI = 'native';
 			msg.volume = 1; // 0 to 1
@@ -569,7 +598,7 @@ rs.setSubroutine('teclado', function(rs, args){
 
 
 			speechSynthesis.speak(msg);
-			
+
     }
 });
 
@@ -599,10 +628,10 @@ function sendMessage () {
 	$("#boton").show();
 	  $("#boton2").hide();
 
-	
+
 	$(".container").append('<div class="bubble bubble-alt "><p style="font-size:40px;color:#912288">' + text + '</p></div>');
 	try {
-		
+
 	var reply = rs.reply("soandso", text);
 	if(ajaxcount === 0){
 		showreply(reply);
@@ -639,7 +668,7 @@ function showreply(reply) {
         if(reply !== ''){
 		reply = reply.replace(/\n/g, "<br>");
 		$(".container").append('<div class="bubble yellow"><p style="font-size:40px;color:#FFF">'+reply+'</p></div>');
-		
+
 		$(".container").animate({ scrollTop: $('.container').prop("scrollHeight")}, 1000);
 		if(prendido === 'S' || (ajaxcount > 0 && audiocommand)){
 			if(audiocommand){
@@ -672,10 +701,41 @@ function cancel() {
     }
 }
 
+if (day == 2){
+	pin = "";
+	showreply("Hola, veo que tienes una solicitud de crédito inconclusa. Tan solo te falta un dato para finalizar. Di retomar solicitud para continuar");
+	var msg = new SpeechSynthesisUtterance();
+
+	msg.voice = voices[6]; // Note: some voices don't support altering params
+	msg.voiceURI = 'native';
+	msg.volume = 1; // 0 to 1
+	/*msg.rate = 1; // 0.1 to 10
+	msg.pitch = 1; //0 to 2*/
+	msg.text = "Hola, veo que tienes una solicitud de crédito inconclusa. Tan solo te falta un dato para finalizar. Di retomar solicitud para continuar";
+	msg.lang = 'es-UY';
+
+
+	speechSynthesis.speak(msg);
+}
+function truco(){
+	showreply("Hola, veo que tienes una solicitud de crédito inconclusa. Tan solo te falta un dato para finalizar. Di retomar solicitud para continuar");
+	var msg = new SpeechSynthesisUtterance();
+
+	msg.voice = voices[6]; // Note: some voices don't support altering params
+	msg.voiceURI = 'native';
+	msg.volume = 1; // 0 to 1
+	/*msg.rate = 1; // 0.1 to 10
+	msg.pitch = 1; //0 to 2*/
+	msg.text = "Hola, veo que tienes una solicitud de crédito inconclusa. Tan solo te falta un dato para finalizar. Di retomar solicitud para continuar";
+	msg.lang = 'es-UY';
+
+
+	speechSynthesis.speak(msg);
+	
+	$('#truco').hide();
+}
 
 </script>
 
 </body>
 </html>
-
-

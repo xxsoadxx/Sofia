@@ -26,7 +26,7 @@
 
     + (la cuenta es|cuenta numero|cuenta) *
     % confirmas la cuenta *
-    - <set cuenta=<star2>><star2> confirmas la cuenta? 
+    - <set cuenta=<star2>><star2> confirmas la cuenta?
 
     + si
     % confirmas la cuenta *
@@ -35,7 +35,7 @@
     + (el monto es|monto) *
     % bien continuamos. indicame el monto a transferir
     - <set monto=<star2>>confirmas el monto <star2>?
-    
+
     + si
     % confirmas el monto *
     - estamos listos para transferir. di transferir para enviar
@@ -58,7 +58,6 @@
 - El saldo de tu cuenta es de $10800
 
 
-
 > object getcot javascript
     console.log("getcot ejecuto");
     ajaxcount ++;
@@ -68,11 +67,11 @@
             console.log("error");
 			ajaxcount --;
 			showreply("El servicio no esta disponible");
-        
+
         },
         success: function(data) {
            console.log("data" + JSON.stringify(data));
-		   
+
            showreply("La cotizacion del dolar es, compra 30 venta 40");
            ajaxcount --;
         },

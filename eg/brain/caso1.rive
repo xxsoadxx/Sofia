@@ -1,0 +1,61 @@
+! array pedirinfo = asisteme|asistime|necesito|informacion|informame|dame informacion|necesito informacion|quiero informacion|solicito informacion|solicitar informacion|me informas|me informa|cuentame|contame|me cuentas|me cuenta|me dice|dime|decime|me dices|explica|explicame|me explicas|quiero|decir|quiero consultarte|consulta|consultar|quiero preguntarte|preguntar|que es|hablame|cuales|cuales son
+
++ [*] (comprar|adquirir) (auto|coche|automovil) [*]
+- ¿De que monto aproximadamente?
+
++ [*] (estado|estados|paso|situacion|encuentra) [*] credito [*]
+- <call>dedito</call> El crédito se encuentra en evaluación.
+
++ [*] @pedirinfo mes no pago [*]
+- <call>dedito</call> Es un mes que eliges al año en que se no se te cobra la cuota, para ser pagada posteriormente. ¿Deseas activar esta característica?
+
++ [*]
+% Es un mes que eliges al año en que se no se te cobra la cuota, para ser pagada posteriormente. ¿Deseas activar esta característica?
+- <call>risa</call> Listo! La solicitud ha sido enviada! En estos momentos te envío a tu correo el listado de documentos necesarios, para que  los reenvíes.
+
+
+> object notificationdoc javascript
+        console.log("need more documents");
+        setTimeout(b, 5000);
+
+         function b(){
+           $("#dedito").show();
+           $("#normal").hide();
+           setTimeout(function(){ $("#dedito").hide();$("#normal").show(); }, 2270);
+
+           $(".container").append('<div class="bubble yellow"><p style="font-size:40px;color:#FFF">'+reply+'</p></div>');
+
+       		$(".container").animate({ scrollTop: $('.container').prop("scrollHeight")}, 1000);
+       			console.log("Va a hablar");
+       			var msg = new SpeechSynthesisUtterance();
+       			console.log("voices = " + JSON.stringify(voices));
+       			msg.voice = voices[6]; // Note: some voices don't support altering params
+       			msg.voiceURI = 'native';
+       			msg.volume = 1; // 0 to 1
+       			/*msg.rate = 1; // 0.1 to 10
+       			msg.pitch = 1; //0 to 2*/
+       			msg.text = "Se necesita el Certificado de Cotizaciones de AFP de los últimos 12 meses como documentación adicional. Por favor, envia el documento a creditos@bci.cl";
+       			msg.lang = 'es-UY';
+
+       			msg.onend = function(e) {
+       			console.log('Finished in ' + event.elapsedTime + ' seconds.');
+       			};
+
+       			speechSynthesis.speak(msg);
+         }
+
+< object
+
+
+> object prueba javascript
+        console.log("need more documents");
+        //showreply("hola");
+        var au=prendido;
+        setTimeout(function(){
+        //if(au==true)
+        prendido=true;
+        showreply("hola");
+        prendido = false;
+        }, 5000);
+
+< object
